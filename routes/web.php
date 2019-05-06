@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@home')->name('home');
+Route::get('/upcoming', 'IndexController@upcoming')->name('upcoming');
+Route::get('/schedule', 'IndexController@schedule')->name('schedule');
+Route::get('/about', 'IndexController@about')->name('about');
+Route::get('/contact', 'IndexController@contact')->name('contact');
+Route::get('/profile', 'IndexController@profile')->name('profile');
+
+// Route for Auth + login to the dashboard panel
+Route::get('/login', 'IndexController@login')->name('login');
