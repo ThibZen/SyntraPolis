@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>App Name - @yield('title')</title>
-    </head>
-    <body>
+@extends('layouts.default')
+
         <header>
             @include('includes.topnavigation')
         </header>
@@ -14,9 +10,3 @@
                 @include('includes.upcoming')
             </section>
         </div>
-
-        <footer>
-            @include('includes.footer')
-        </footer>
-    </body>
-</html>

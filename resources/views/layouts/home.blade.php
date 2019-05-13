@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>App Name - @yield('title')</title>
-    </head>
-    <body>
+@extends('layouts.default')
         <header>
-            @include('includes.topnavigation')
+            <!-- THIBAULT : DE TOPNAV WORDT INGELADEN VIA DE DEFAULT. HIJ ZOU DE TOPNAV + NAVBANNER & BOTNAV MOETEN INLADEN OP DEZE PAGINA. -->
+            @parent
             @include('includes.navbanner')
             @include('includes.botnavigation')
         </header>
@@ -13,8 +9,3 @@
             @include('includes.movietiles')
             @include('includes.banner')
         </div>
-        <footer>
-            @include('includes.footer')
-        </footer>
-    </body>
-</html>
