@@ -21,7 +21,7 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function upcoming() {
-        return view('upcoming');
+        return view('layouts.upcoming');
     }
 
     /**
