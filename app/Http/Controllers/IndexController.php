@@ -30,7 +30,7 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function schedule() {
-        return view('schedule');
+        return view('layouts.schedule');
     }
 
     /**
@@ -39,7 +39,7 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function about() {
-        return view('about');
+        return view('layouts.about');
     }
 
     /**
@@ -48,7 +48,7 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function contact() {
-        return view('contact');
+        return view('layouts.contact');
     }
 
     /**
@@ -57,7 +57,7 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function profile() {
-        return view('profile');
+        return view('layouts.profile');
     }
 
     /**
