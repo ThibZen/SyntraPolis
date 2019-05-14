@@ -7,6 +7,7 @@
         @section('header')
             <header>
                 @include('includes.topnavigation')
+                @include('includes.botnavigation')
             </header>
         @show
         @section('content')
