@@ -1,5 +1,8 @@
 @extends('layouts.default')
 
-        <div class="container">
-            
-        </div>
+@section('content')
+        @include('includes.banner')
+        @include('includes.text')
+        @include('includes.banner')
+        @include('includes.text')
+@endsection
