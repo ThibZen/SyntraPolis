@@ -1,9 +1,8 @@
 @extends('layouts.default')
 
-@section('includes.navbanner')
-@endsection
-
-@section('includes.botnavigation')
+@section('header')
+    @include('includes.navbanner')
+    @include('includes.botnavigation')
 @endsection
 
 @section('content')

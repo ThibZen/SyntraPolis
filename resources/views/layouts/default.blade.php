@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>App Name - @yield('title')</title>
-    </head>
+    @include('includes.head')
     <body>
         @section('header')
             <header>
                 @include('includes.topnavigation')
-                @include('includes.botnavigation')
+                @yield('header')
             </header>
-        @show
-        @section('content')
-            <div class="container">
-            </div>
-        @show
+        <div class="container">
+            @yield('content')
+        </div>
         <footer>
             @include('includes.footer')
         </footer>
