@@ -1,3 +1,4 @@
+@yield('extra-js')
 <div class="footer">
     <p>
         Sign up for our newsletter
