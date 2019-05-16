@@ -1,11 +1,23 @@
 <nav class="topnav">
     <div id="logo"></div>
     <ul>
-        <li> icon </li>
-        <li> Upcoming </li>
-        <li> Schedule </li>
-        <li> About </li>
-        <li> Contact </li>
-        <li> Profile </li>
+        <a href="#"> 
+            <li> icon </li>
+        </a>
+        <a href="#">
+            <li> Upcoming </li>
+        </a>
+        <a href="#"> 
+            <li> Schedule </li>
+        </a>
+        <a href="#"> 
+            <li> About </li>
+        </a>
+        <a href="#"> 
+            <li> Contact </li>
+        </a>
+        <a href="#">
+            <li> Profile </li>
+        </a>
     </ul>
 </nav>
