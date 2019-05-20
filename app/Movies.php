@@ -14,7 +14,7 @@ class Movies extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'street', 'number', 'zipcode', 'city', 'country', 'phone', 'email'
+        'MovieID', 'Title', 'DescriptionShort', 'DescriptionLong', 'Runtime', 'ReleaseDate', 'Foto', 'Status', 'IMDBLink'
     ];
 
 
