@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Movies extends Model
+class Movie extends Model
 {
     protected $table = 'movies';
 
@@ -29,8 +29,30 @@ class Movies extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function users()
+
+    public function movieactors()
     {
-        return $this->hasMany('App\User');
+        return $this->hasMany('App\Movieactor');
     }
+
+    public function moviedirectors()
+    {
+        return $this->hasMany('App\Moviedirector');
+    }
+
+    public function moviegenre()
+    {
+        return $this->hasMany('App\Moviegenre');
+    }
+
+    public function moviepegi()
+    {
+        return $this->hasMany('App\Moviepegi');
+    }
+
+    public function screening()
+    {
+        return $this->hasMany('App\Screening');
+    }
+
 }

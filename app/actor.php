@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class actor extends Model
 {
-    //
+    protected $table = 'actor';
+
+    public function movieactors()
+    {
+        return $this->belongsToMany('App\Movieactors');
+    }
 }
