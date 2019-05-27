@@ -1,8 +1,10 @@
 <nav class="topnav">
-    <div id="logo"></div>
+    <div id="logo">
+        <img src="/syntrapolis/public/images/logo.png">
+    </div>
     <ul>
         <a href="#"> 
-            <li> icon </li>
+            <li> <i class="fas fa-user"></i> </li>
         </a>
         <a href="#">
             <li> Upcoming </li>
@@ -13,7 +15,7 @@
         <a href="#"> 
             <li> About </li>
         </a>
-        <a href="#"> 
+        <a href="#">
             <li> Contact </li>
         </a>
         <a href="#">
