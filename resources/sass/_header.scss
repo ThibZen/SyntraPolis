@@ -20,6 +20,7 @@ header {
         align-self: flex-start;
         margin-right: auto;
         margin-left: 5px;
+
         img {
         max-height: 95px;
         }
@@ -27,10 +28,18 @@ header {
     ul {       
         display: flex;
         align-content: center;
+
         a {
             padding: 20px 15px 0 10px;
             color: white;
             text-decoration: none;
+            font-size: 16pt;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                font-size: 18pt;
+                color: $lightgrey;
+            }
         }
         li {
             display: inline-block;
@@ -56,13 +65,22 @@ header {
 
     ul {       
         position: relative;
-        display: flex;
         float: left;
+        display: flex;
         align-content: center;
+        width: 100%;
+        padding: 0;
+
         a {
-            padding: 20px 15px 0 10px;
+            padding: 22px 20px 20px 20px;
             color: white;
             text-decoration: none;
+            font-size: 16pt;
+
+            &:last-of-type {
+                position: absolute;
+                right: 0;
+            }
         }
         li {
             display: inline-block;

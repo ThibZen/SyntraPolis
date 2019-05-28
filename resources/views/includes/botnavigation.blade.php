@@ -6,25 +6,25 @@
         <a href="#">
             <li> Tomorrow </li>
         </a>
-        <a href="#"> 
+        <a class="day" href="#"> 
             <li> Mon. </li>
         </a>
-        <a href="#"> 
+        <a class="day" href="#"> 
             <li> Tue. </li>
         </a>
-        <a href="#"> 
+        <a class="day" href="#"> 
             <li> Wed. </li>
         </a>
         <a href="#">
             <li> Thu. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Fri. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Sat. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Sun. </li>
         </a>
         <a href="#">
