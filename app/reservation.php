@@ -8,6 +8,12 @@ class reservation extends Model
 {
     protected $table = 'reservation';
 
+    /*********************************************************
+     *
+     * RELATIONSHIP METHODS
+     *
+     *********************************************************/
+
     public function seatreserved()
     {
         return $this->hasMany('App\Seat');

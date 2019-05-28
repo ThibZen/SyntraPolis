@@ -8,6 +8,13 @@ class seat extends Model
 {
     protected $table = 'seat';
 
+    /*********************************************************
+     *
+     * RELATIONSHIP METHODS
+     *
+     *********************************************************/
+
+
     public function seatreserved()
     {
         return $this->belongsToMany('App\Seatreserved');

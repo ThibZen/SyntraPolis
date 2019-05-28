@@ -8,6 +8,13 @@ class auditorium extends Model
 {
     protected $table = 'auditorium';
 
+    /*********************************************************
+     *
+     * RELATIONSHIP METHODS
+     *
+     *********************************************************/
+
+
     public function seat()
     {
         return $this->hasMany('App\Seat');

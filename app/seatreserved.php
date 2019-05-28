@@ -8,6 +8,13 @@ class seatreserved extends Model
 {
     protected $table = 'seatreserved';
 
+    /*********************************************************
+     *
+     * RELATIONSHIP METHODS
+     *
+     *********************************************************/
+
+
     public function reservation()
     {
         return $this->belongsTo('App\Reservation');

@@ -8,6 +8,15 @@ class movieactors extends Model
 {
     protected $table = 'movieactors';
 
+    /*********************************************************
+     *
+     * RELATIONSHIP METHODS
+     *
+     *********************************************************/
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function genre()
     {
         return $this->hasOne('App\actor');
