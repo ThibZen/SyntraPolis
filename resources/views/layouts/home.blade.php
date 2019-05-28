@@ -6,6 +6,6 @@
 @endsection
 
 @section('content')
-    @include('inclugit pdes.movietiles')
+    @include('includes.movietiles')
     @include('includes.banner')
 @endsection
