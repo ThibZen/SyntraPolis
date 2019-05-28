@@ -20,7 +20,9 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function home() {
-        $movies = movie::all();
+        /** deze geeft de movies weer gesorteerd op release date van klein naar groot */
+
+        $movies = movie::all()->sortBy('ReleaseDate');
         dd($movies[0]);
 
         return view('layouts.home')
