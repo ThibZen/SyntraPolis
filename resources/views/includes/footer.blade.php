@@ -12,3 +12,4 @@
         <li> facebook </li>
     </ul>
 </div>
+<script src= " {{ URL::asset('/js/functions.js')}} "></script>

@@ -15,7 +15,7 @@
         <a class="day" href="#"> 
             <li> Wed. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Thu. </li>
         </a>
         <a class="day" href="#">

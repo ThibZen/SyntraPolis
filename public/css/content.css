@@ -21,21 +21,40 @@ header {
   margin-left: 5px;
 }
 
+.topnav #logo a {
+  padding: 0;
+  font-size: 15pt;
+}
+
+.topnav #logo a:hover {
+  font-size: 15pt;
+}
+
 .topnav #logo img {
   max-height: 95px;
+}
+
+.topnav a {
+  padding: 35px 15px 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 15pt;
+  transition: all 0.2s ease-in-out;
+}
+
+.topnav a:hover {
+  font-size: 18pt;
+  color: #ededed;
 }
 
 .topnav ul {
   display: flex;
   align-content: center;
+  padding-left: 0;
 }
 
 .topnav ul a {
-  padding: 20px 15px 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 16pt;
-  transition: all 0.2s ease-in-out;
+  padding-top: 20px;
 }
 
 .topnav ul a:hover {
@@ -74,19 +93,65 @@ header {
 }
 
 .botnav ul a {
-  padding: 22px 20px 20px 20px;
+  padding: 22px 0px 20px 15px;
   color: white;
   text-decoration: none;
-  font-size: 16pt;
+  font-size: 14pt;
+}
+
+.botnav ul a:nth-of-type(2) {
+  padding-right: 20px;
 }
 
 .botnav ul a:last-of-type {
   position: absolute;
+  padding-right: 15px;
   right: 0;
 }
 
 .botnav ul li {
   display: inline-block;
+}
+
+/* MEDIAQUERIES *****************************************/
+
+@media screen and (max-width: 1020px) {
+  .topnav ul {
+    display: none;
+  }
+
+  .topnav .hamburger {
+    padding: 25px;
+    padding-left: 15px;
+  }
+
+  .topnav .hamburger .bar1,
+  .topnav .hamburger .bar2,
+  .topnav .hamburger .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .topnav .hamburger.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .topnav .hamburger.open .bar2 {
+    opacity: 0;
+  }
+
+  .topnav .hamburger.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .botnav ul a.day {
+    display: none;
+  }
 }
 
 footer {

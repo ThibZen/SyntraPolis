@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mediaqueries';
 
 header {
     width: 80%;
@@ -21,20 +22,40 @@ header {
         margin-right: auto;
         margin-left: 5px;
 
+        a {
+            padding: 0;
+            font-size: 15pt;
+
+            &:hover {
+                font-size: 15pt;
+            }
+            //This is to prevent the hover from extending the navbar
+        }
+
         img {
         max-height: 95px;
         }
     }
+    a {
+        padding: 35px 15px 0 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 15pt;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            font-size: 18pt;
+            color: $lightgrey;
+        }
+    }
+    
     ul {       
         display: flex;
         align-content: center;
+        padding-left: 0;
 
         a {
-            padding: 20px 15px 0 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 16pt;
-            transition: all .2s ease-in-out;
+            padding-top: 20px;
 
             &:hover {
                 font-size: 18pt;
@@ -50,7 +71,7 @@ header {
 .navbanner {
     width: 100%;
     min-height: 200px;
-
+    
     img {
         width: 100%;
     }
@@ -72,18 +93,65 @@ header {
         padding: 0;
 
         a {
-            padding: 22px 20px 20px 20px;
+            padding: 22px 0px 20px 15px;
             color: white;
             text-decoration: none;
-            font-size: 16pt;
+            font-size: 14pt;
+
+            &:nth-of-type(2) {
+                padding-right: 20px;
+            }
 
             &:last-of-type {
                 position: absolute;
+                padding-right: 15px;
                 right: 0;
             }
         }
         li {
             display: inline-block;
+        }
+    }
+}
+
+/* MEDIAQUERIES *****************************************/
+
+@include mobile {
+    .topnav {
+        ul {
+            display: none;
+        }
+        .hamburger {
+            padding: 25px;
+            padding-left: 15px;
+            .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+            }
+
+            &.open {
+                .bar1 {
+                    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                    transform: rotate(-45deg) translate(-9px, 6px);
+                }
+                .bar2 { opacity: 0;
+                }
+                .bar3 {
+                    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                    transform: rotate(45deg) translate(-8px, -8px);
+                  }
+            }
+        }
+    }
+
+    .botnav {
+        ul {
+            a.day {
+                display: none;
+            }
         }
     }
 }
