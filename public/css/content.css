@@ -1,3 +1,35 @@
+body {
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.show-flex {
+  display: flex !important;
+}
+
+.scroll-y {
+  overflow-y: visible;
+}
+
+.noscroll-y {
+  overflow-y: hidden;
+}
+
 header {
   width: 80%;
   margin: 0 auto;
@@ -116,8 +148,39 @@ header {
 /* MEDIAQUERIES *****************************************/
 
 @media screen and (max-width: 1020px) {
+  .topnav {
+    overflow: hidden;
+  }
+
   .topnav ul {
     display: none;
+    overflow-y: hidden;
+    position: absolute;
+    box-sizing: border-box;
+    flex-direction: column;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    top: 90px;
+    background-color: #f25457;
+  }
+
+  .topnav ul a {
+    padding: 0;
+    font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  .topnav ul a:hover {
+    background-color: #ededed;
+    color: #f25457;
+  }
+
+  .topnav ul li {
+    text-align: center;
+    width: 100%;
+    padding: 25px;
   }
 
   .topnav .hamburger {

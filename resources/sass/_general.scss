@@ -1,9 +1,14 @@
 @import 'variables';
 
-ul {
-    list-style-type: none;
-}
+body {overflow-x: hidden}
 
-a {
-    text-decoration: none;
-}
+ul {list-style-type: none;}
+
+a {text-decoration: none;}
+
+.hide {display: none !important;}
+.show {display: block !important;}
+.show-flex {display: flex !important;}
+
+.scroll-y {overflow-y: visible;}
+.noscroll-y{overflow-y:hidden;}

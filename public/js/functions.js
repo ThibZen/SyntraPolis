@@ -93,9 +93,13 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var body = document.querySelector('body');
 var hamburger = document.querySelector('.hamburger');
+var topnavigation = document.querySelector('.topnav ul');
 hamburger.addEventListener('click', function () {
   hamburger.classList.toggle('open');
+  topnavigation.classList.toggle('show-flex');
+  body.classList.toggle('noscroll-y');
 });
 
 /***/ }),
