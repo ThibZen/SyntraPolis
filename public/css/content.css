@@ -168,7 +168,7 @@ header {
 
   .topnav ul a {
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     transition: 0.3s ease-in-out;
   }
 
@@ -180,7 +180,7 @@ header {
   .topnav ul li {
     text-align: center;
     width: 100%;
-    padding: 25px;
+    padding: 30px;
   }
 
   .topnav .hamburger {
