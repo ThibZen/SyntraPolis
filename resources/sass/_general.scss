@@ -1,6 +1,9 @@
 @import 'variables';
+@import 'mediaqueries';
 
-body {overflow-x: hidden}
+body { 
+    overflow-x: hidden;
+}
 
 ul {list-style-type: none;}
 
@@ -12,3 +15,11 @@ a {text-decoration: none;}
 
 .scroll-y {overflow-y: visible;}
 .noscroll-y{overflow-y:hidden;}
+
+/* MEDIAQUERIES *****************************************/
+@include mobile {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+}

@@ -30,6 +30,15 @@ a {
   overflow-y: hidden;
 }
 
+/* MEDIAQUERIES *****************************************/
+
+@media screen and (max-width: 1020px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 header {
   width: 80%;
   margin: 0 auto;
@@ -148,8 +157,13 @@ header {
 /* MEDIAQUERIES *****************************************/
 
 @media screen and (max-width: 1020px) {
+  header {
+    width: 100%;
+  }
+
   .topnav {
     overflow: hidden;
+    margin-bottom: 0;
   }
 
   .topnav ul {
@@ -212,9 +226,90 @@ header {
     transform: rotate(45deg) translate(-8px, -8px);
   }
 
+  .navbanner {
+    display: none;
+  }
+
+  .botnav ul {
+    flex-direction: column;
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+
+  .botnav ul > a {
+    border-bottom: solid 1px #6b6b6b;
+    font-size: 18pt;
+  }
+
+  .botnav ul > a:first-of-type {
+    border-top: solid 1px #6b6b6b;
+  }
+
   .botnav ul a.day {
     display: none;
   }
+
+  .botnav ul a:last-of-type {
+    position: relative;
+  }
+
+  .botnav ul input[type=text] {
+    border: none;
+    background-color: #f25457;
+    color: white;
+    font-size: 18pt;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .botnav ul input[type=text]:hover {
+    cursor: pointer;
+  }
+
+  .botnav ul input[type=text]:focus {
+    outline: none;
+    cursor: pointer;
+  }
+
+  .botnav ul input[type=text]::-webkit-input-placeholder {
+    color: white;
+  }
+
+  .botnav ul input[type=text]::-moz-placeholder {
+    color: white;
+  }
+
+  .botnav ul input[type=text]:-ms-input-placeholder {
+    color: white;
+  }
+
+  .botnav ul input[type=text]::-ms-input-placeholder {
+    color: white;
+  }
+
+  .botnav ul input[type=text]::placeholder {
+    color: white;
+  }
+}
+
+#ui-datepicker-div .ui-datepicker-header {
+  display: none;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar {
+  background-color: #f25457;
+  color: #6b6b6b;
+  font-family: sans-serif;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar thead {
+  line-height: 30pt;
+  color: white;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar a {
+  color: white;
 }
 
 footer {

@@ -28,7 +28,8 @@
             <li> Sun. </li>
         </a>
         <a href="#">
-            <li> Choose Date </li>
+            <!--<li> Choose Date </li>-->
+            <input type="text" id="date" placeholder="Choose Date">
         </a>
     </ul>
 </nav>

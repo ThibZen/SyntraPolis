@@ -118,8 +118,12 @@ header {
 /* MEDIAQUERIES *****************************************/
 
 @include mobile {
+    header {
+        width: 100%;
+    }
     .topnav {
         overflow: hidden;
+        margin-bottom: 0;
         ul {
             display: none;
             overflow-y: hidden;
@@ -176,11 +180,74 @@ header {
         }
     }
 
+    .navbanner {
+        display: none;
+    }
+
     .botnav {
         ul {
-            a.day {
-                display: none;
+            flex-direction: column;
+            float: none;
+            margin: 0;
+            text-align: center;
+
+            & > a {
+                border-bottom: solid 1px $darkgrey;
+                font-size: 18pt;
+
+                &:first-of-type {
+                    border-top: solid 1px $darkgrey;
+                }
             }
+
+            a {
+                &.day {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    position: relative;
+                }
+            }
+
+            input[type=text] {
+                border: none;
+                background-color: $red;
+                color: white;
+                font-size: 18pt;
+                text-transform: uppercase;
+                text-align: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
+                &:focus {
+                    outline: none;
+                    cursor: pointer;
+                }
+                &::placeholder{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+#ui-datepicker-div {
+    .ui-datepicker-header {
+        display: none;
+    }
+    .ui-datepicker-calendar {
+        background-color: $red;
+        color: $darkgrey;
+        font-family: sans-serif;
+
+        thead {
+            line-height: 30pt;
+            color: white;
+        }
+
+        a {
+            color: white;
         }
     }
 }
