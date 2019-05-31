@@ -1,6 +1,6 @@
 <nav class="topnav">
     <div id="logo">
-        <a href="#">
+        <a href="{{ route('home') }}">
         <img src="/syntrapolis/public/images/logo.png">
         </a>
     </div>
@@ -8,19 +8,19 @@
         <i class="fas fa-user"></i>
     </a>
     <ul>
-        <a href="#">
+        <a href="{{ route('upcoming') }}">
             <li> Upcoming </li>
         </a>
-        <a href="#"> 
+        <a href="{{ route('schedule') }}"> 
             <li> Schedule </li>
         </a>
-        <a href="#"> 
+        <a href="{{ route('about') }}"> 
             <li> About </li>
         </a>
-        <a href="#">
+        <a href="{{ route('contact') }}">
             <li> Contact </li>
         </a>
-        <a href="#">
+        <a href="{{ route('profile') }}">
             <li> Profile </li>
         </a>
     </ul>
