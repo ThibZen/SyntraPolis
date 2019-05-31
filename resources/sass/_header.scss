@@ -106,11 +106,33 @@ header {
             &:last-of-type {
                 position: absolute;
                 padding-right: 15px;
+                padding-top: 18px;
                 right: 0;
             }
         }
+
         li {
             display: inline-block;
+        }
+
+        input[type=text] {
+            border: none;
+            background-color: $red;
+            color: white;
+            font-size: 18pt;
+            text-transform: uppercase;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+            &:focus {
+                outline: none;
+                cursor: pointer;
+            }
+            &::placeholder{
+                color: white;
+            }
         }
     }
 }
@@ -208,27 +230,7 @@ header {
                 &:last-of-type {
                     position: relative;
                 }
-            }
-
-            input[type=text] {
-                border: none;
-                background-color: $red;
-                color: white;
-                font-size: 18pt;
-                text-transform: uppercase;
-                text-align: center;
-
-                &:hover {
-                    cursor: pointer;
-                }
-                &:focus {
-                    outline: none;
-                    cursor: pointer;
-                }
-                &::placeholder{
-                    color: white;
-                }
-            }
+            } 
         }
     }
 }
