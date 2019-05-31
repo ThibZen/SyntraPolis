@@ -3,11 +3,17 @@
 
 body { 
     overflow-x: hidden;
+    background: $lightgrey;
 }
 
 ul {list-style-type: none;}
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+    color:white;
+
+    &:visited {color:white;}
+}
 
 .hide {display: none !important;}
 .show {display: block !important;}

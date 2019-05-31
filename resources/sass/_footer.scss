@@ -2,5 +2,49 @@
 
 footer {
     width: 80%;
+    min-height: 95px;
     margin: 0 auto;
+    font-family: sans-serif;
+    background-color: $red;
+    color: white;
+    padding: 15px;
+    padding-bottom: 0;
+
+    p {
+        margin: 0;
+        float: left;
+        padding: 10px 0;
+    }
+
+    form {
+        float: left;
+        clear: left;
+
+        input {
+            &[type=text] {
+                color: $red;
+            }
+            &[type=submit]{
+                background-color: white;
+                color: $red;
+                border: solid 1px white;
+                padding: 2px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .socialmedia {
+        float: right;
+        font-size: 20pt;
+
+        i {
+            padding: 0 5px;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                color: $lightgrey;
+            }
+        }
+    }
 }

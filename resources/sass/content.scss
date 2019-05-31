@@ -18,9 +18,24 @@
         width: 20%;
         min-width: 140px;
         padding: 25px 25px 0 25px;
+
+        &:last-of-type {
+            padding-bottom: 50px;
+        }
+
         img {
             width: 100%;
             height: auto;
         }
+    }
+}
+
+.banner {
+    width: 100%;
+    min-height: 200px;
+    padding-bottom: 10px;
+    
+    img {
+        width: 100%;
     }
 }

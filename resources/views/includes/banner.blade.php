@@ -1,3 +1,3 @@
 <div class="banner">
-    <!-- Create banner here with JS/JQuery -->
+    <img src="images/banner.jpg">
 </div>

@@ -213,6 +213,10 @@ header {
             margin: 0;
             text-align: center;
 
+            input[type=text] {
+                font-size: 18pt;
+            }
+
             & > a {
                 border-bottom: solid 1px $darkgrey;
                 font-size: 18pt;

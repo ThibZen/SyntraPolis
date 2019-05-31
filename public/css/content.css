@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  background: #ededed;
 }
 
 ul {
@@ -8,6 +9,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: white;
 }
 
 .hide {
@@ -276,6 +282,10 @@ header {
     text-align: center;
   }
 
+  .botnav ul input[type=text] {
+    font-size: 18pt;
+  }
+
   .botnav ul > a {
     border-bottom: solid 1px #6b6b6b;
     font-size: 18pt;
@@ -315,7 +325,50 @@ header {
 
 footer {
   width: 80%;
+  min-height: 95px;
   margin: 0 auto;
+  font-family: sans-serif;
+  background-color: #f25457;
+  color: white;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  float: left;
+  padding: 10px 0;
+}
+
+footer form {
+  float: left;
+  clear: left;
+}
+
+footer form input[type=text] {
+  color: #f25457;
+}
+
+footer form input[type=submit] {
+  background-color: white;
+  color: #f25457;
+  border: solid 1px white;
+  padding: 2px;
+  font-weight: bold;
+}
+
+footer .socialmedia {
+  float: right;
+  font-size: 20pt;
+}
+
+footer .socialmedia i {
+  padding: 0 5px;
+  transition: 0.2s ease-in-out;
+}
+
+footer .socialmedia i:hover {
+  color: #ededed;
 }
 
 .container {
@@ -338,8 +391,22 @@ footer {
   padding: 25px 25px 0 25px;
 }
 
+.tilecontainer .movie:last-of-type {
+  padding-bottom: 50px;
+}
+
 .tilecontainer .movie img {
   width: 100%;
   height: auto;
+}
+
+.banner {
+  width: 100%;
+  min-height: 200px;
+  padding-bottom: 10px;
+}
+
+.banner img {
+  width: 100%;
 }
 
