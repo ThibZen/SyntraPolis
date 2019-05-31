@@ -6,3 +6,21 @@
     width: 80%;
     margin: 0 auto;
 }
+
+.tilecontainer {
+    width: 100%;
+    min-width: 300px;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .movie {
+        width: 20%;
+        min-width: 140px;
+        padding: 25px 25px 0 25px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
