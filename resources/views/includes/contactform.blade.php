@@ -1,4 +1,6 @@
 <form method="POST">
+    @csrf
+
     <label for="firstname">First Name</label><br>
     <input name="firstname" id="firstname" type="text"><br>
 
