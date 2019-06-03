@@ -21,7 +21,6 @@ class IndexController extends Controller
      */
     public function home() {
         $movies = movie::all()->sortBy('ReleaseDate');
-        //dd($movies[0]);
 
         return view('layouts.home')
             ->with('movies', $movies);

@@ -1,20 +1,20 @@
 <nav class="topnav">
     <div id="logo">
         <a href="{{ route('home') }}">
-        <img src="/syntrapolis/public/images/logo.png">
+        <img src="/SyntraPolis/public/images/logo.png">
         </a>
     </div>
-    <a href="#"> 
+    <a href="#">
         <i class="fas fa-user"></i>
     </a>
     <ul>
         <a href="{{ route('upcoming') }}">
             <li> Upcoming </li>
         </a>
-        <a href="{{ route('schedule') }}"> 
+        <a href="{{ route('schedule') }}">
             <li> Schedule </li>
         </a>
-        <a href="{{ route('about') }}"> 
+        <a href="{{ route('about') }}">
             <li> About </li>
         </a>
         <a href="{{ route('contact') }}">
