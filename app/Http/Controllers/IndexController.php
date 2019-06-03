@@ -20,7 +20,11 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function home() {
-        return view('layouts.home');
+        $movies = movie::all()->sortBy('ReleaseDate');
+        //dd($movies[0]);
+
+        return view('layouts.home')
+            ->with('movies', $movies);
     }
 
     /**
