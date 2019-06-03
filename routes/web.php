@@ -20,3 +20,7 @@ Route::get('/profile', 'IndexController@profile')->name('profile');
 
 // Route for Auth + login to the dashboard panel
 Route::get('/login', 'IndexController@login')->name('login');
+
+// Route for insertForm and insert in DB
+
+Route::post('/insert','DBController@insert');
