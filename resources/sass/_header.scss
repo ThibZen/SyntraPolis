@@ -1,0 +1,262 @@
+@import 'variables';
+@import 'general';
+@import 'mediaqueries';
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.topnav {
+    width: 100%;
+    background: $red;
+    min-height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    text-transform: uppercase;
+
+    #logo {
+        align-self: flex-start;
+        margin-right: auto;
+        margin-left: 5px;
+
+        a {
+            padding: 0;
+            font-size: 15pt;
+
+            &:hover {
+                font-size: 15pt;
+            }
+            //This is to prevent the hover from extending the navbar
+        }
+
+        img {
+        max-height: 95px;
+        }
+    }
+    a {
+        padding: 35px 15px 0 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 15pt;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            font-size: 18pt;
+            color: $lightgrey;
+        }
+    }
+    
+    ul {       
+        display: flex;
+        align-content: center;
+        padding-left: 0;
+
+        a {
+            padding-top: 20px;
+
+            &:hover {
+                font-size: 18pt;
+                color: $lightgrey;
+            }
+        }
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+.navbanner {
+    width: 100%;
+    min-height: 200px;
+    
+    img {
+        width: 100%;
+    }
+}
+
+.botnav {
+    width: 100%;
+    background: $red;
+    min-height: 100px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    ul {       
+        position: relative;
+        float: left;
+        display: flex;
+        align-content: center;
+        width: 100%;
+        padding: 0;
+
+        a {
+            padding: 22px 0px 20px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 14pt;
+
+            &:nth-of-type(2) {
+                padding-right: 20px;
+            }
+
+            &:last-of-type {
+                position: absolute;
+                padding-right: 15px;
+                padding-top: 18px;
+                right: 0;
+            }
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        input[type=text] {
+            border: none;
+            background-color: $red;
+            color: white;
+            font-size: 14pt;
+            text-transform: uppercase;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+            &:focus {
+                outline: none;
+                cursor: pointer;
+            }
+            &::placeholder{
+                color: white;
+            }
+        }
+    }
+}
+
+/* MEDIAQUERIES *****************************************/
+
+@include mobile {
+    header {
+        width: 100%;
+    }
+    .topnav {
+        overflow: hidden;
+        margin-bottom: 0;
+        ul {
+            display: none;
+            overflow-y: hidden;
+            position: absolute;
+            box-sizing: border-box;
+            flex-direction: column;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            right: 0px;
+            top: 90px;
+            background-color: $red;
+
+            a {
+                padding: 0;
+                font-size: 1.8rem;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: $lightgrey;
+                    color: $red;
+                }
+            }
+
+            li {
+                text-align: center;
+                width: 100%;
+                padding: 30px;
+            }
+        }
+        .hamburger {
+            padding: 25px;
+            padding-left: 15px;
+
+            .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+            }
+
+            &.open {
+                .bar1 {
+                    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                    transform: rotate(-45deg) translate(-9px, 6px);
+                }
+                .bar2 { opacity: 0;
+                }
+                .bar3 {
+                    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                    transform: rotate(45deg) translate(-8px, -8px);
+                  }
+            }
+        }
+    }
+
+    .navbanner {
+        display: none;
+    }
+
+    .botnav {
+        ul {
+            flex-direction: column;
+            float: none;
+            margin: 0;
+            text-align: center;
+
+            input[type=text] {
+                font-size: 18pt;
+            }
+
+            & > a {
+                border-bottom: solid 1px $darkgrey;
+                font-size: 18pt;
+
+                &:first-of-type {
+                    border-top: solid 1px $darkgrey;
+                }
+            }
+
+            a {
+                &.day {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    position: relative;
+                }
+            } 
+        }
+    }
+}
+#ui-datepicker-div {
+    display: none; 
+    
+    .ui-datepicker-header {
+        display: none;
+    }
+    .ui-datepicker-calendar {
+        background-color: $red;
+        color: $darkgrey;
+        font-family: sans-serif;
+
+        thead {
+            line-height: 30pt;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+    }
+}
