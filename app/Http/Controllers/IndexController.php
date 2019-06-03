@@ -32,7 +32,10 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function upcoming() {
-        return view('layouts.upcoming');
+        $movies = movie::all()->sortBy('ReleaseDate');
+
+        return view('layouts.upcoming')
+            ->with('movies', $movies);
     }
 
     /**
