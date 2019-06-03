@@ -304,6 +304,10 @@ header {
   }
 }
 
+#ui-datepicker-div {
+  display: none;
+}
+
 #ui-datepicker-div .ui-datepicker-header {
   display: none;
 }
