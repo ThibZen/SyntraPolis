@@ -8,4 +8,5 @@
 @section('content')
     @include('includes.movietiles')
     @include('includes.banner')
+    <div>{{ $movies[3]->Foto }}</div>
 @endsection
