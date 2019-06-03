@@ -115,9 +115,20 @@ $(document).ready(function () {
         var saturday = new Date(sunday.getTime());
         saturday.setDate(sunday.getDate() + 6);
         return [date >= sunday && date <= saturday, ''];
+      },
+      onSelect: function onSelect() {
+        this.focus();
       }
     });
     $("#date").datepicker("option", "dateFormat", "dd/mm/yy");
+    /* $("#date").datepicker({
+         onSelect: function(){
+             this.focus();
+         }
+     });
+     if( $( "#date" ).datepicker( "show" )) {
+         this.focus;
+     }*/
   });
 });
 
