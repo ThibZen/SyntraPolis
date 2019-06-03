@@ -1,3 +1,3 @@
-<div class="banner">
-    <!-- Create the banner here with JS/JQuery -->
+<div class="navbanner">
+    <img src="images/banner.jpg">
 </div>

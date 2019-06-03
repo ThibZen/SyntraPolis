@@ -6,29 +6,30 @@
         <a href="#">
             <li> Tomorrow </li>
         </a>
-        <a href="#"> 
+        <a class="day" href="#"> 
             <li> Mon. </li>
         </a>
-        <a href="#"> 
+        <a class="day" href="#"> 
             <li> Tue. </li>
         </a>
-        <a href="#"> 
+        <a class="day" href="#"> 
             <li> Wed. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Thu. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Fri. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Sat. </li>
         </a>
-        <a href="#">
+        <a class="day" href="#">
             <li> Sun. </li>
         </a>
         <a href="#">
-            <li> Choose Date </li>
+            <!--<li> Choose Date </li>-->
+            <input type="text" id="date" placeholder="Choose Date">
         </a>
     </ul>
 </nav>
