@@ -17,14 +17,13 @@
     @endforelse--}}
 
     <section class="tilecontainer">
-    @for ($i = 0; $i < 8; $i++)
+    @foreach ($filter as $filter)
         <div class="movie">
             <a href="#">
-                <img src="{{ asset('/images/Poster/'.$movies[$i]->Foto.'.jpg') }}">
+                <img src="{{ asset('/images/Poster/'.$filter->Foto.'.jpg') }}">
             </a>
         </div>
-    @endfor
+    @endforeach
     </section>
-
     @include('includes.banner')
 @endsection

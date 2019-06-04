@@ -1,5 +1,6 @@
+
 <div class="contactinfo">
-    <span class="bold"> SyntraPolis </span>
+    <br><span class="bold"> SyntraPolis </span>
 
     <a href="tel:+012345678"> +012 34 56 78 </a>
     <a href="mailto:info@syntrapolis.be">info@syntrapolis.be</a>

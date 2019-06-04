@@ -20,10 +20,12 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function home() {
-        $movies = movie::all()->sortBy('ReleaseDate');
+        $movies = movie::all();
+        $filter = $movies->sortByDesc('ReleaseDate')->take(8);
+        //dd($filter);
 
         return view('layouts.home')
-            ->with('movies', $movies);
+            ->with('filter', $filter);
     }
 
     /**
@@ -44,7 +46,7 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function schedule() {
-        $movies = movie::all()->sortBy('ReleaseDate');
+        $movies = movie::all();
 
         return view('layouts.schedule')
             ->with('movies', $movies);
@@ -66,15 +68,6 @@ class IndexController extends Controller
      */
     public function contact() {
         return view('layouts.contact');
-    }
-
-    /**
-     *
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function profile() {
-        return view('layouts.profile');
     }
 
     /**
