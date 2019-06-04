@@ -15,12 +15,12 @@
             <p>There are no movies</p>
         </div>
     @endforelse--}}
-    
+
     <section class="tilecontainer">
     @for ($i = 0; $i < 8; $i++)
         <div class="movie">
             <a href="#">
-                <img src="{{ asset('../resources/db/Poster/'.$movies[$i]->Foto.'.jpg') }}">
+                <img src="{{ asset('Poster/'.$movies[$i]->Foto.'.jpg') }}">
             </a>
         </div>
     @endfor
