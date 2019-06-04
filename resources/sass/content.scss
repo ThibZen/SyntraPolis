@@ -27,6 +27,25 @@
             width: 100%;
             height: auto;
         }
+
+        ul {
+            padding-left: 55px;
+            position: relative;
+            margin-top: -44px;
+
+            a {
+                color: black;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+            li {
+                padding: 5px 0;
+            }
+        }
     }
 }
 
@@ -76,6 +95,16 @@
             p:first-of-type {
                 border-top: solid 1px $red;
             }
+        }
+    }
+}
+
+/* SCHEDULE **************************************************/
+
+@include mobile {
+    .movie {        
+        ul {
+            float:right;
         }
     }
 }

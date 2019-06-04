@@ -4,12 +4,12 @@
 body { 
     overflow-x: hidden;
     background: $lightgrey;
+    font-family: sans-serif;
 }
 
 ul {list-style-type: none;}
 
 h1,h2,h3 { 
-    font-family: sans-serif;
     color: $red;
     text-align: center;
 }
@@ -17,7 +17,6 @@ h1,h2,h3 {
 h1 {padding-bottom: 20px;}
 
 p { 
-    font-family: sans-serif;
     line-height: 1.8;
     text-align: justify;
 }

@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   background: #ededed;
+  font-family: sans-serif;
 }
 
 ul {
@@ -10,7 +11,6 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: sans-serif;
   color: #f25457;
   text-align: center;
 }
@@ -20,8 +20,8 @@ h1 {
 }
 
 p {
-  font-family: sans-serif;
   line-height: 1.8;
+  text-align: justify;
 }
 
 a {
@@ -421,6 +421,25 @@ footer .socialmedia i:hover {
   height: auto;
 }
 
+.tilecontainer .movie ul {
+  padding-left: 55px;
+  position: relative;
+  margin-top: -44px;
+}
+
+.tilecontainer .movie ul a {
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.tilecontainer .movie ul a:hover {
+  color: #f25457;
+}
+
+.tilecontainer .movie ul li {
+  padding: 5px 0;
+}
+
 .banner {
   width: 100%;
   min-height: 200px;
@@ -447,5 +466,36 @@ footer .socialmedia i:hover {
 
 .upcomingcontainer .upcomingmovie img {
   width: 100%;
+}
+
+@media screen and (max-width: 1020px) {
+  .upcomingcontainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .upcomingcontainer .upcomingmovie {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .upcomingcontainer .upcomingmovie img {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .upcomingcontainer .upcomingmovie p:first-of-type {
+    border-top: solid 1px #f25457;
+  }
+}
+
+/* SCHEDULE **************************************************/
+
+@media screen and (max-width: 1020px) {
+  .movie ul {
+    float: right;
+  }
 }
 
