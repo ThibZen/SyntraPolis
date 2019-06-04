@@ -1,7 +1,7 @@
 <nav class="topnav">
     <div id="logo">
         <a href="{{ route('home') }}">
-        <img src="/SyntraPolis/public/images/logo.png">
+        <img src="{{ asset('/images/logo.png') }}">
         </a>
     </div>
     <a href="#">
