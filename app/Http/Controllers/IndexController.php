@@ -44,7 +44,10 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function schedule() {
-        return view('layouts.schedule');
+        $movies = movie::all();
+
+        return view('layouts.schedule')
+            ->with('movies', $movies);
     }
 
     /**
