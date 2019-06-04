@@ -7,6 +7,23 @@ ul {
   list-style-type: none;
 }
 
+h1,
+h2,
+h3 {
+  font-family: sans-serif;
+  color: #f25457;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 20px;
+}
+
+p {
+  font-family: sans-serif;
+  line-height: 1.8;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -411,6 +428,24 @@ footer .socialmedia i:hover {
 }
 
 .banner img {
+  width: 100%;
+}
+
+/* UPCOMING MOVIE **************************************************/
+
+.upcomingcontainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.upcomingcontainer .upcomingmovie {
+  width: 30%;
+}
+
+.upcomingcontainer .upcomingmovie img {
   width: 100%;
 }
 

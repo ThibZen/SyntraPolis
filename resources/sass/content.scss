@@ -39,3 +39,20 @@
         width: 100%;
     }
 }
+
+/* UPCOMING MOVIE **************************************************/
+.upcomingcontainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    .upcomingmovie {
+        width: 30%;
+        
+        img {
+            width: 100%;
+        }
+    }
+}
