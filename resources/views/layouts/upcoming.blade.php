@@ -1,19 +1,19 @@
 @extends('layouts.default')
-              
-@section('content')        
+
+@section('content')
     <h1> Upcoming Movies </h1>
     <section class="upcomingcontainer">
-            @for ($i = 0; $i < 3; $i++)
+            @foreach($filter as $filter)
             <div class="upcomingmovie">
-                    <img src="{{ asset('/images/Poster/'.$movies[$i]->Foto.'.jpg') }}">
-                    <h2> {{$movies[$i]->Title}} </h2>
-                    <h3> {{ date('d-m-Y', strtotime($movies[$i]->ReleaseDate))}} </h3>
-                
+                    <img src="{{ asset('/images/Poster/'.$filter->Foto.'.jpg') }}">
+                    <h2> {{$filter->Title}} </h2>
+                    <h3> {{ date('d-m-Y', strtotime($filter->ReleaseDate))}} </h3>
+
                     <p>
-                        {{$movies[$i]->DescriptionLong}}
-                    </p>                    
+                        {{$filter->DescriptionLong}}
+                    </p>
                     <div class="readmore"></div>
                 </div>
-        @endfor
+        @endforeach
     </section>
 @endsection
