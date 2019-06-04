@@ -14,7 +14,10 @@ h1,h2,h3 {
     text-align: center;
 }
 
-h1 {padding-bottom: 20px;}
+h1 {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
 
 p { 
     line-height: 1.8;
