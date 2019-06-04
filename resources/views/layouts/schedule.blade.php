@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('header')
+    @include('includes.botnavigation')
+@endsection
+
 @section('content')
         <h1> Schedule </h1>
         <section class="tilecontainer">

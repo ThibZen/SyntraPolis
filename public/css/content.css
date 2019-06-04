@@ -500,3 +500,26 @@ footer .socialmedia i:hover {
   }
 }
 
+/* ABOUT **************************************************/
+
+section.text {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.text article {
+  width: 45%;
+}
+
+@media screen and (max-width: 1020px) {
+  section.text {
+    flex-direction: column;
+  }
+
+  section.text article {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
