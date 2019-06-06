@@ -4,7 +4,7 @@
         <img src="{{ asset('/images/logo.png') }}">
         </a>
     </div>
-    <a href="#">
+    <a href="{{ route('profile') }}">
         <i class="fas fa-user"></i>
     </a>
     <ul>
