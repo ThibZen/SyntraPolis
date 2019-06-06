@@ -256,3 +256,25 @@ section.text {
     }
 }
 
+@include mobile {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+
+        .contactleft {
+            width: 100%;
+
+            article {
+                padding-bottom: 30px;
+            }
+        }
+
+        .contactright {
+            width: 100%;
+
+            .maps {
+                width: 100%;
+            }
+        }
+    }
+}

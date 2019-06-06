@@ -646,3 +646,26 @@ section.text article {
   padding: 5px 0;
 }
 
+@media screen and (max-width: 1020px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .contactleft {
+    width: 100%;
+  }
+
+  .contact .contactleft article {
+    padding-bottom: 30px;
+  }
+
+  .contact .contactright {
+    width: 100%;
+  }
+
+  .contact .contactright .maps {
+    width: 100%;
+  }
+}
+
