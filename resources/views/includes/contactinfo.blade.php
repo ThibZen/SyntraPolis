@@ -1,10 +1,8 @@
 
 <div class="contactinfo">
-    <br><span class="bold"> SyntraPolis </span>
-
-    <a href="tel:+012345678"> +012 34 56 78 </a>
+    <br><h3> SyntraPolis </h3>
+    <a href="tel:+012345678"> +012 34 56 78 </a> <br>
     <a href="mailto:info@syntrapolis.be">info@syntrapolis.be</a>
-
     <p> Opening Hours : </p>
     <ul>
         <li> Monday: 08h00 - 23h00 </li>
