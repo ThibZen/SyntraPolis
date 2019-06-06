@@ -540,21 +540,33 @@ section.text article {
   justify-content: space-between;
 }
 
-.contact .contactform {
+.contact .contactleft {
   width: 50%;
 }
 
-.contact .contactform label {
+.contact .contactleft article {
+  padding-bottom: 75px;
+}
+
+.contact .contactleft article p {
+  margin-top: 0;
+}
+
+.contact .contactleft .contactform {
+  width: 100%;
+}
+
+.contact .contactleft .contactform label {
   padding-bottom: 5px;
   display: block;
 }
 
-.contact .contactform input,
-.contact .contactform textarea {
+.contact .contactleft .contactform input,
+.contact .contactleft .contactform textarea {
   width: 65%;
 }
 
-.contact .contactform input {
+.contact .contactleft .contactform input {
   margin-bottom: 25px;
   border: 0;
   border-bottom: solid 1px #f25457;
@@ -564,13 +576,13 @@ section.text article {
   transition: 0.3s all ease-in-out;
 }
 
-.contact .contactform input:focus {
+.contact .contactleft .contactform input:focus {
   outline: none;
   background: #f5f5f5;
   border-bottom-color: salmon;
 }
 
-.contact .contactform input[type=submit] {
+.contact .contactleft .contactform input[type=submit] {
   text-transform: uppercase;
   background-color: #f25457;
   font-weight: bold;
@@ -583,13 +595,13 @@ section.text article {
   transition: 0.3s ease-in-out;
 }
 
-.contact .contactform input[type=submit]:hover {
+.contact .contactleft .contactform input[type=submit]:hover {
   cursor: pointer;
   color: #f25457;
   background-color: #f5f5f5;
 }
 
-.contact .contactform textarea {
+.contact .contactleft .contactform textarea {
   border: 0;
   font-family: sans-serif;
   border-bottom: solid 1px #f25457;
