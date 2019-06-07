@@ -166,6 +166,12 @@ section.text {
             input,
             textarea {
                 width: 65%;
+
+                &:focus {
+                    outline: none;
+                    background: $grey;
+                    border-bottom-color: salmon;
+                }
             }
     
             input {
@@ -176,12 +182,6 @@ section.text {
                 height: 25px;
                 padding-left: 15px;
                 transition: 0.3s all ease-in-out;
-    
-                &:focus {
-                    outline: none;
-                    background: $grey;
-                    border-bottom-color: salmon;
-                }
     
                 &[type=text] {
                    // height: 25px;

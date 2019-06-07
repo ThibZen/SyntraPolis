@@ -568,6 +568,13 @@ section.text article {
   width: 65%;
 }
 
+.contact .contactleft .contactform input:focus,
+.contact .contactleft .contactform textarea:focus {
+  outline: none;
+  background: #f5f5f5;
+  border-bottom-color: salmon;
+}
+
 .contact .contactleft .contactform input {
   margin-bottom: 25px;
   border: 0;
@@ -576,12 +583,6 @@ section.text article {
   height: 25px;
   padding-left: 15px;
   transition: 0.3s all ease-in-out;
-}
-
-.contact .contactleft .contactform input:focus {
-  outline: none;
-  background: #f5f5f5;
-  border-bottom-color: salmon;
 }
 
 .contact .contactleft .contactform input[type=submit] {
