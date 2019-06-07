@@ -393,6 +393,16 @@ footer .socialmedia i:hover {
   color: #ededed;
 }
 
+@media screen and (max-width: 1020px) {
+  footer {
+    width: 100%;
+  }
+
+  footer .socialmedia {
+    margin-right: 25px;
+  }
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -500,6 +510,8 @@ footer .socialmedia i:hover {
   }
 }
 
+/* SPECIFIC MOVIE **************************************************/
+
 /* ABOUT **************************************************/
 
 section.text {
@@ -519,6 +531,143 @@ section.text article {
   section.text article {
     display: flex;
     margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* CONTACT **************************************************/
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .contactleft {
+  width: 50%;
+}
+
+.contact .contactleft article {
+  padding-bottom: 75px;
+}
+
+.contact .contactleft article p {
+  margin-top: 0;
+}
+
+.contact .contactleft .contactform {
+  width: 100%;
+}
+
+.contact .contactleft .contactform label {
+  padding-bottom: 5px;
+  display: block;
+}
+
+.contact .contactleft .contactform input,
+.contact .contactleft .contactform textarea {
+  width: 65%;
+}
+
+.contact .contactleft .contactform input:focus,
+.contact .contactleft .contactform textarea:focus {
+  outline: none;
+  background: #f5f5f5;
+  border-bottom-color: salmon;
+}
+
+.contact .contactleft .contactform input {
+  margin-bottom: 25px;
+  border: 0;
+  border-bottom: solid 1px #f25457;
+  background: none;
+  height: 25px;
+  padding-left: 15px;
+  transition: 0.3s all ease-in-out;
+}
+
+.contact .contactleft .contactform input[type=submit] {
+  text-transform: uppercase;
+  background-color: #f25457;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  height: 50px;
+  font-size: 14pt;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact .contactleft .contactform input[type=submit]:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
+}
+
+.contact .contactleft .contactform textarea {
+  border: 0;
+  font-family: sans-serif;
+  border-bottom: solid 1px #f25457;
+  background-color: #f5f5f5;
+  min-height: 75px;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.contact .contactright {
+  width: 60%;
+}
+
+.contact .contactright .maps {
+  width: 90%;
+  margin-bottom: 25px;
+  float: right;
+}
+
+.contact .contactright .contactinfo {
+  text-align: center;
+}
+
+.contact .contactright .contactinfo h3 {
+  font-size: 18pt;
+  margin: 0;
+  padding: 0 0 5px 30px;
+}
+
+.contact .contactright .contactinfo a {
+  color: #f25457;
+  padding-left: 30px;
+}
+
+.contact .contactright .contactinfo p {
+  text-align: center;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+.contact .contactright .contactinfo ul li {
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 1020px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .contactleft {
+    width: 100%;
+  }
+
+  .contact .contactleft article {
+    padding-bottom: 30px;
+  }
+
+  .contact .contactright {
+    width: 100%;
+  }
+
+  .contact .contactright .maps {
     width: 100%;
   }
 }

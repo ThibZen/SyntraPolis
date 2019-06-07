@@ -48,3 +48,13 @@ footer {
         }
     }
 }
+
+@include mobile {
+    footer {
+        width: 100%;
+
+        .socialmedia {
+            margin-right: 25px;
+        }
+    }
+}
