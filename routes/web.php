@@ -17,6 +17,7 @@ Route::get('/schedule', 'IndexController@schedule')->name('schedule');
 Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
 Route::get('/profile', 'IndexController@profile')->name('profile');
+Route::get('/specific', 'IndexController@specificMovie')->name('specificMovie');
 
 // Route for Auth + login to the dashboard panel
 Route::get('/login', 'IndexController@login')->name('login');

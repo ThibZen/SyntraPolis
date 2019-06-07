@@ -81,4 +81,10 @@ class IndexController extends Controller
         return view('auth.login');
     }
 
+    public function specificMovie() {
+        $movies = movie::all();
+
+        return view('layouts.specificmovie')
+            ->with('movies', $movies);
+    }
 }
