@@ -11,6 +11,7 @@ use App\moviepegi;
 use App\pricing;
 use App\screening;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
