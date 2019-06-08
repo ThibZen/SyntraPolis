@@ -17,15 +17,41 @@
     .movie {
         width: 20%;
         min-width: 140px;
+        height: 100%;
+        position: relative;
         padding: 25px 25px 0 25px;
 
         &:last-of-type {
             padding-bottom: 50px;
         }
 
+        &:hover .overlay {
+            background-color: rgba(0,0,0,0.8);
+            max-height: 100%;
+            margin-bottom: 0;
+        } 
+        
         img {
             width: 100%;
             height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            background-color: rgba(0,0,0,0.5);
+            max-height: 0;
+            transition: all ease-in-out 0.5s;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 10%;
+            padding-bottom: 45px;
+
+            h2 {
+                opacity: 0.75;
+                margin-top: 10px;
+            }
         }
 
         ul {
@@ -58,6 +84,7 @@
         width: 100%;
     }
 }
+
 
 /* UPCOMING MOVIE **************************************************/
 .upcomingcontainer {
