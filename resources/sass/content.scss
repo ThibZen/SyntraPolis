@@ -110,8 +110,84 @@
 }
 
 /* SPECIFIC MOVIE **************************************************/
+.specificcontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-top: 20px;
 
+    .specificleft {
+        width: 40%;
 
+        img {
+            width: 75%;
+            padding-top: 50px;
+        }
+
+        .showingdays {
+            padding: 10px 0;
+            margin: 0;
+            text-align: center;
+            width: 75%;
+
+            li {
+                padding: 5px 0;
+            }
+        }
+
+        .orderbtn {
+            text-transform: uppercase;
+            background-color: #f25457;
+            font-weight: bold;
+            color: white;
+            border: solid 2px #f25457;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 75%;
+            margin-bottom: 15px;
+            font-size: 14pt;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                color: $red;
+                background-color: $grey;
+            }
+        }
+    }
+    .specificright {
+        width: 55%;
+
+        h1 {
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        .movieinfo {
+            background-color: $grey;
+            padding: 1px 0 1px 10px;
+        }
+
+        article {
+            p {
+                text-align: left;
+            }
+        }
+
+        .text {
+            article {
+                width: 100%;
+                
+                p {
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
 
 
 /* ABOUT **************************************************/

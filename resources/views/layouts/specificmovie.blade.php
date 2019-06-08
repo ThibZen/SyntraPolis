@@ -31,7 +31,7 @@
         </section>
         <section class="specificleft">
                 <img src="{{ asset('/images/Poster/'.$movies[0]->Foto.'.jpg') }}">
-                <ul>
+                <ul class="showingdays">
                         <?php 
                                 $date = date('d-m-Y');
                                 $weekOfdays = array();

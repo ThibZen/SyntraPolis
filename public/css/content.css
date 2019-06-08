@@ -512,6 +512,82 @@ footer .socialmedia i:hover {
 
 /* SPECIFIC MOVIE **************************************************/
 
+.specificcontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding-top: 20px;
+}
+
+.specificcontainer .specificleft {
+  width: 40%;
+}
+
+.specificcontainer .specificleft img {
+  width: 75%;
+  padding-top: 50px;
+}
+
+.specificcontainer .specificleft .showingdays {
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  width: 75%;
+}
+
+.specificcontainer .specificleft .showingdays li {
+  padding: 5px 0;
+}
+
+.specificcontainer .specificleft .orderbtn {
+  text-transform: uppercase;
+  background-color: #f25457;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 75%;
+  margin-bottom: 15px;
+  font-size: 14pt;
+  transition: 0.3s ease-in-out;
+}
+
+.specificcontainer .specificleft .orderbtn:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
+}
+
+.specificcontainer .specificright {
+  width: 55%;
+}
+
+.specificcontainer .specificright h1 {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.specificcontainer .specificright .movieinfo {
+  background-color: #f5f5f5;
+  padding: 1px 0 1px 10px;
+}
+
+.specificcontainer .specificright article p {
+  text-align: left;
+}
+
+.specificcontainer .specificright .text article {
+  width: 100%;
+}
+
+.specificcontainer .specificright .text article p {
+  text-align: justify;
+}
+
 /* ABOUT **************************************************/
 
 section.text {
