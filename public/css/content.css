@@ -588,6 +588,39 @@ footer .socialmedia i:hover {
   text-align: justify;
 }
 
+@media screen and (max-width: 1020px) {
+  .specificcontainer {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .specificcontainer .specificleft,
+  .specificcontainer .specificright {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .specificcontainer .specificleft {
+    border-bottom: solid 1px #f25457;
+  }
+
+  .specificcontainer .specificleft img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .specificcontainer .specificleft .showingdays {
+    margin: 0 auto;
+  }
+
+  .specificcontainer .specificleft .orderbtn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* ABOUT **************************************************/
 
 section.text {

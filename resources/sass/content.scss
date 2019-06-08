@@ -189,6 +189,39 @@
     }
 }
 
+@include mobile {
+    .specificcontainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        .specificleft,
+        .specificright {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        .specificleft {
+            border-bottom: solid 1px $red;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .showingdays {
+                margin: 0 auto;
+            }
+
+            .orderbtn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
 
 /* ABOUT **************************************************/
 
