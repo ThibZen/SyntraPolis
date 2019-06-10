@@ -24,9 +24,3 @@ Route::get('/login', 'IndexController@login')->name('login');
 // Route for insertForm and insert in DB
 
 Route::post('/insert','DBController@insert');
-Route::get('dbdata', function () {
-
-    $moviedb = DB::table('movie')->get();
-
-    return view('dbdata', ['moviedb' => $moviedb]);
-});

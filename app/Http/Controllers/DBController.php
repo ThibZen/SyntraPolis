@@ -4,22 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\movie;
 
 class DBController extends Controller
 {
 
-    function getData()
+    public function showData()
     {
-        $data['data'] = DB::table('movie')->get();
-
-        if(count($data[0]) > 0)
-        {
-            return view('insertForm',$data);
-        }
-        else
-        {
-            return view('insertForm');
-        }
+       $movies = movie::all();
+       return view('includes.dbdata')->with('movies',$movies);
     }
 
     function record_exists_movie ($table, $column, $value)
@@ -146,7 +139,6 @@ class DBController extends Controller
         $status = $req->input ('status');
         $imdb = $req->input ('imdb');
 
-        $data = array('titel'=>$titel,'action'=>$action);
 
         if ($this->record_exists_movie('movie','Title',$movie_title) == true) {
             //already in DB

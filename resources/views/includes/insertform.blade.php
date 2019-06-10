@@ -16,7 +16,7 @@
         </p>
         <p>
             <label for="longdescr">Long description:</label>
-            <input type="text" name="long_descr" id="long_descr">
+            <textarea type="text" name="long_descr" id="long_descr" rows="5" cols="50"></textarea>
         </p>
         <p>
             <label for="runtime">Runtime:</label>

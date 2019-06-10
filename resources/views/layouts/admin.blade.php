@@ -65,15 +65,12 @@
                 <li class="header">ADMIN</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active">
-                    <a href='admin.movies.index'><i class="fa fa-link"></i> <span>Movies</span></a>
+                    <a href='admin.movies.index'><i class="fa fa-link"></i> <span>Insert movie</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a>
+                    <a href=""><i class="fa fa-link"></i> <span>View/edit/delete</span></a>
                 </li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-                        <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
+
               </span>
                     </a>
                     <ul class="treeview-menu">
@@ -92,8 +89,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Movies
-                <small>Optional description</small>
+                Movie insert form
             </h1>
         </section>
 
@@ -101,7 +97,8 @@
         <section class="content container-fluid">
 
             @include('includes.insertform')
-
+            @inject('display','App\Http\Controllers\DBController')
+            {{$display->showData()}}
         </section>
         <!-- /.content -->
     </div>
@@ -111,14 +108,14 @@
     <footer class="main-footer">
         <!-- To the right -->
         <div class="pull-right hidden-xs">
-            Anything you want
+            {{--Anything you want--}}
         </div>
         <!-- Default to the left -->
         <strong>{{ date('Y') }} <a href="/">SyntraPolis</a>.</strong> All rights reserved.
     </footer>
 
 </div>
-<!-- ./wrapper -->
+
 
 <!-- REQUIRED JS SCRIPTS -->
 
@@ -129,8 +126,5 @@
 <!-- AdminLTE App -->
 <link rel="javascript" href={{ URL::asset('../vendor/almasaeed2010/adminlte/dist/js/adminlte.js') }}>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. -->
 </body>
 </html>
