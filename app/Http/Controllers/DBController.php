@@ -7,24 +7,6 @@ use DB;
 
 class DBController extends Controller
 {
-//    function insert(Request $req)
-//    {
-//
-//
-//        $data = array(
-//            'movieTitle'=>$movie_title,
-//            'shortDescription'=>$short_descr,
-//            'longDescription'=>$long_descr,
-//            'runtime'=>$runtime,
-//            'releaseDate'=>$releasedate,
-//            'poster'=>$poster,
-//            'status'=>$status,
-//            'imdb'=>$imdb);
-//
-//        DB::table('movie')->insert($data);
-//
-//        echo "Succes";
-//    }
 
     function getData()
     {
@@ -56,7 +38,7 @@ class DBController extends Controller
 
     function record_exists_names ($table, $value)
     {
-        $result = DB::select("SELECT * FROM {$table} WHERE CONCAT(FirstName,' ',LastName) LIKE '%$value%'", [1]);
+        $result = DB::select("SELECT * FROM {$table} WHERE",DB::raw("CONCAT(FirstName,' ',LastName) LIKE '%$value%'"))->fetch_all()[0];
         if(sizeof($result) == 0) {
             $output = ' nothing found';
             echo $output;
@@ -75,7 +57,7 @@ class DBController extends Controller
         if ($this->record_exists_names('actor', $actorfull) == false) {
             //RECORD DOESNT EXIST
             $sqlActor = "INSERT INTO actor (FirstName, LastName) VALUES ('$actorfirst','$actorlast')";
-            if(DB::insert('$sqlActor')){
+            if(DB::insert($sqlActor)){
                 echo " Actor records added successfully.";
                 $actor_id = DB::getPdo()->lastInsertId();;
             } else {
@@ -83,7 +65,7 @@ class DBController extends Controller
             }
         } else {
             //RECORD EXISTS
-            $result = (DB::select("SELECT ActorID FROM actor WHERE CONCAT(FirstName,' ',LastName) LIKE '%$actorfull%'"))->fetch_all()[0];
+            $result = (DB::select("ActorID FROM actor WHERE",DB::raw(" CONCAT(FirstName,' ',LastName) LIKE '%$actorfull%'")))->fetch_all()[0];
             $actor_id = $result[0];
         }
         return $actor_id;
@@ -106,7 +88,7 @@ class DBController extends Controller
             }
         } else {
             //RECORD EXISTS
-            $result = (DB::select("DirectorID FROM director WHERE" DB::raw('CONCAT(FirstName,' ',LastName)')" LIKE '%$directorfull%'"))->fetch_all()[0];
+            $result = (DB::select("DirectorID FROM director WHERE", DB::raw("CONCAT(FirstName,' ',LastName) LIKE '%$directorfull%'")))->fetch_all()[0];
             $director_id = $result[0];
         }
         return $director_id;
@@ -164,6 +146,8 @@ class DBController extends Controller
         $status = $req->input ('status');
         $imdb = $req->input ('imdb');
 
+        $data = array('titel'=>$titel,'action'=>$action);
+
         if ($this->record_exists_movie('movie','Title',$movie_title) == true) {
             //already in DB
         }else{
@@ -178,6 +162,7 @@ class DBController extends Controller
                 $this->movieDirectorsInsert($movie_id,$director_id);
                 $this->movieGenreInsert($movie_id);
                 $this->moviePegiInsert($movie_id);
+                $this->getData();
             } else{
                 echo "ERROR: Could not able to execute $sqlMovie. " . sqlite_last_error();
             }

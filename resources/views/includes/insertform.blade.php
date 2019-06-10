@@ -5,7 +5,7 @@
 </head>
 <body>
     <form action="{{ action('DBController@insert') }}" method="post">
-        {{ csrf_field() }}
+        @csrf
         <p>
             <label for="movietitle">Movie title:</label>
             <input type="text" name="movie_title" id="movietitle">
@@ -103,13 +103,6 @@
         <input type="submit" name="submit" value="Add">
     </form>
 
-    {{--@foreach($data as $value)--}}
-        {{--<table>--}}
-            {{--<tr>--}}
-                {{--<td></td>--}}
-            {{--</tr>--}}
-        {{--</table>--}}
-    {{--@endforeach--}}
 
 </body>
 </html>
