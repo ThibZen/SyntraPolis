@@ -83,4 +83,17 @@ class IndexController extends Controller
         return view('auth.login');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function admin(){
+        return view('layouts.admin');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function insertform(){
+        return view('includes.insertform');
+    }
 }

@@ -1,5 +1,4 @@
-{{--@extends('layouts.default')--}}
-@extends('layouts.admin')
+@extends('layouts.default')
 
 @section('header')
     @include('includes.navbanner')

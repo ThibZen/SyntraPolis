@@ -1,9 +1,8 @@
-<!doctype html>
-<html lang="">
-<head>
+@extends('layouts.admin')
+@section('content')
+
     <title>Insert Form</title>
-</head>
-<body>
+
     <form action="{{ action('DBController@insert') }}" method="post">
         @csrf
         <p>
@@ -102,7 +101,4 @@
         </p>
         <input type="submit" name="submit" value="Add">
     </form>
-
-
-</body>
-</html>
+@endsection

@@ -64,7 +64,6 @@ class DBController extends Controller
         return $actor_id;
     }
 
-
     function directorInsert(Request $req)
     {
         $directorfirst = $req->input ('director_first');
@@ -72,10 +71,10 @@ class DBController extends Controller
         $directorfull = $directorfirst . ' ' . $directorlast;
         if ($this->record_exists_names('director', $directorfull) == false) {
             //RECORD DOESNT EXIST
-            $sqlDirector = "INSERT INTO director (FirstName, LastName) VALUES ('$directorfirst','$directorlast')";
+                $sqlDirector = "INSERT INTO director (FirstName, LastName) VALUES ('$directorfirst','$directorlast')";
             if (DB::insert($sqlDirector)){
                 echo "Director records added successfully.";
-                $director_id = DB::getPdo()->lastInsertId();;
+                $director_id = DB::getPdo()->lastInsertId();
             } else {
                 echo "ERROR: Could not able to execute $sqlDirector. " . sqlite_last_error();
             }
@@ -154,10 +153,21 @@ class DBController extends Controller
                 $this->movieDirectorsInsert($movie_id,$director_id);
                 $this->movieGenreInsert($movie_id);
                 $this->moviePegiInsert($movie_id);
-                $this->getData();
+                return redirect()
+                    ->route('layouts.admin');
             } else{
                 echo "ERROR: Could not able to execute $sqlMovie. " . sqlite_last_error();
             }
         }
+
+//        function datePicker
+//        {
+//            DB::select()
+//        }
+
+//        function update()
+//        {
+//
+//        }
     }
 }

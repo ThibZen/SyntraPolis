@@ -65,10 +65,13 @@
                 <li class="header">ADMIN</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active">
-                    <a href='admin.movies.index'><i class="fa fa-link"></i> <span>Insert movie</span></a>
+                    <a href='{{route('data')}}'><i class="fa fa-link"></i> <span>View data</span></a>
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-link"></i> <span>View/edit/delete</span></a>
+                    <a href='{{route('insertform')}}'><i class="fa fa-link"></i> <span>Insert movie</span></a>
+                </li>
+                <li>
+                    <a href='{{route('edit')}}'><i class="fa fa-link"></i> <span>Edit/delete</span></a>
                 </li>
 
               </span>
@@ -95,10 +98,7 @@
 
         <!-- Main content -->
         <section class="content container-fluid">
-
-            @include('includes.insertform')
-            @inject('display','App\Http\Controllers\DBController')
-            {{$display->showData()}}
+            @yield('content')
         </section>
         <!-- /.content -->
     </div>
