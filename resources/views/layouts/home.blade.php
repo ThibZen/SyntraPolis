@@ -19,10 +19,10 @@
     <section class="tilecontainer">
     @foreach ($filter as $filter)
         <div class="movie ">
-            <div class="overlay">
-                <h2>{{$filter->Title}}</h2>
-            </div>
             <a href="#">
+                <div class="overlay">
+                    <h2>{{$filter->Title}}</h2>
+                </div>
                 <img src="{{ asset('/images/Poster/'.$filter->Foto.'.jpg') }}">
             </a>
         </div>

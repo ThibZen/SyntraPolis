@@ -422,7 +422,7 @@ footer .socialmedia i:hover {
   min-width: 140px;
   height: 100%;
   position: relative;
-  padding: 25px 25px 0 25px;
+  margin: 25px 25px 0 25px;
 }
 
 .tilecontainer .movie:last-of-type {
@@ -431,7 +431,7 @@ footer .socialmedia i:hover {
 
 .tilecontainer .movie:hover .overlay {
   background-color: rgba(0, 0, 0, 0.8);
-  max-height: 100%;
+  max-height: 98%;
   margin-bottom: 0;
 }
 
@@ -449,7 +449,7 @@ footer .socialmedia i:hover {
   left: 0;
   bottom: 0;
   right: 0;
-  margin: 10%;
+  margin: 0;
   padding-bottom: 45px;
 }
 
