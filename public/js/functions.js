@@ -95,7 +95,8 @@
 
 var body = document.querySelector('body');
 var hamburger = document.querySelector('.hamburger');
-var topnavigation = document.querySelector('.topnav ul');
+var topnavigation = document.querySelector('.topnav ul'); // Mobile Nav
+
 hamburger.addEventListener('click', function () {
   hamburger.classList.toggle('open');
   topnavigation.classList.toggle('show-flex');

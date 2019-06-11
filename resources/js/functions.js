@@ -2,6 +2,9 @@ const body = document.querySelector('body');
 const hamburger = document.querySelector('.hamburger');
 const topnavigation = document.querySelector('.topnav ul');
 
+
+// Mobile Nav
+
 hamburger.addEventListener('click', function(){
     hamburger.classList.toggle('open');
     topnavigation.classList.toggle('show-flex');
@@ -9,7 +12,6 @@ hamburger.addEventListener('click', function(){
 });
 
 // Datepicker
-
 
 $(document).ready(function(){
     $(function () {
@@ -40,3 +42,4 @@ $(document).ready(function(){
         }*/
     });
   });
+
