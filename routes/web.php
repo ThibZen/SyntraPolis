@@ -21,7 +21,7 @@ Route::get('/contact', 'IndexController@contact')->name('contact');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
-Route::get('/register', 'LoginController@register')->name('register');
+Route::get('/register', 'Auth\ LoginController@register')->name('register');
 
 // Password Reset Routes...
 Route::prefix('password')->group(function() {
