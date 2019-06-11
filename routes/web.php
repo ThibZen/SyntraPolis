@@ -16,8 +16,27 @@ Route::get('/upcoming', 'IndexController@upcoming')->name('upcoming');
 Route::get('/schedule', 'IndexController@schedule')->name('schedule');
 Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
+
+// Authentication Routes...
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/register', 'Auth\ LoginController@register')->name('register');
+
+// Password Reset Routes...
+Route::prefix('password')->group(function() {
+    Route::get('/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    Route::post('/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+    Route::post('/reset', 'Auth\ResetPasswordController@reset');
+});
+
+//profile route after login...
 Route::get('/profile', 'IndexController@profile')->name('profile');
 Route::get('/specific', 'IndexController@specificMovie')->name('specificMovie');
 
-// Route for Auth + login to the dashboard panel
-Route::get('/login', 'IndexController@login')->name('login');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('loginSucces');
