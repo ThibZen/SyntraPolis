@@ -17,15 +17,41 @@
     .movie {
         width: 20%;
         min-width: 140px;
-        padding: 25px 25px 0 25px;
+        height: 100%;
+        position: relative;
+        margin: 25px 25px 0 25px;
 
         &:last-of-type {
             padding-bottom: 50px;
         }
 
+        &:hover .overlay {
+            background-color: rgba(0,0,0,0.8);
+            max-height: 98%;
+            margin-bottom: 0;
+        }
+
         img {
             width: 100%;
             height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            background-color: rgba(0,0,0,0.5);
+            max-height: 0;
+            transition: all ease-in-out 0.5s;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+            padding-bottom: 45px;
+
+            h2 {
+                opacity: 0.75;
+                margin-top: 10px;
+            }
         }
 
         ul {
@@ -58,6 +84,7 @@
         width: 100%;
     }
 }
+
 
 /* UPCOMING MOVIE **************************************************/
 .upcomingcontainer {
@@ -110,8 +137,117 @@
 }
 
 /* SPECIFIC MOVIE **************************************************/
+.specificcontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-top: 20px;
 
+    .specificleft {
+        width: 40%;
 
+        img {
+            width: 75%;
+            padding-top: 50px;
+        }
+
+        .showingdays {
+            padding: 10px 0;
+            margin: 0;
+            text-align: center;
+            width: 75%;
+
+            li {
+                padding: 5px 0;
+            }
+        }
+
+        .orderbtn {
+            text-transform: uppercase;
+            background-color: #f25457;
+            font-weight: bold;
+            color: white;
+            border: solid 2px #f25457;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 75%;
+            margin-bottom: 15px;
+            font-size: 14pt;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                color: $red;
+                background-color: $grey;
+            }
+        }
+    }
+    .specificright {
+        width: 55%;
+
+        h1 {
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        .movieinfo {
+            background-color: $grey;
+            padding: 1px 0 1px 10px;
+        }
+
+        article {
+            p {
+                text-align: left;
+            }
+        }
+
+        .text {
+            article {
+                width: 100%;
+                
+                p {
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .specificcontainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        .specificleft,
+        .specificright {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        .specificleft {
+            border-bottom: solid 1px $red;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .showingdays {
+                margin: 0 auto;
+            }
+
+            .orderbtn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
 
 
 /* ABOUT **************************************************/
