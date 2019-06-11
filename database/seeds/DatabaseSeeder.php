@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         $faker = Faker\Factory::create();
         for ($i=1; $i<100; $i++) {
         // $this->call(UsersTableSeeder::class);
-        DB::table('users')->insert([
+        DB::table('User')->insert([
             'Firstname' => $faker->firstName,
             'Lastname' => $faker->lastName,
             'City' => $faker->city,
