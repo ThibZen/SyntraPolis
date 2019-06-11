@@ -81,6 +81,20 @@ class IndexController extends Controller
         return view('auth.login');
     }
 
+    /**
+     *
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function profile() {
+        return view('layouts.profile');
+    }
+
+    /**
+     *
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function specificMovie() {
         $movies = movie::all();
 

@@ -16,6 +16,7 @@ Route::get('/upcoming', 'IndexController@upcoming')->name('upcoming');
 Route::get('/schedule', 'IndexController@schedule')->name('schedule');
 Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
+Route::get('/specific/{MovieID}', 'IndexController@specificMovie')->name('specificMovie');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -32,11 +33,9 @@ Route::prefix('password')->group(function() {
 });
 
 //profile route after login...
-Route::get('/profile', 'IndexController@profile')->name('profile');
-Route::get('/specific', 'IndexController@specificMovie')->name('specificMovie');
+Route::prefix('profile')->middleware('auth')->group(function() {
+    Route::get('/', 'IndexController@profile')->name('profile.index');
+});
 
-
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('loginSucces');

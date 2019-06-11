@@ -12,17 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        for ($i=1; $i<100; $i++) {
         // $this->call(UsersTableSeeder::class);
-        DB::table('User')->insert([
-            'Firstname' => $faker->firstName,
-            'Lastname' => $faker->lastName,
-            'City' => $faker->city,
-            'Zip' => $faker->postcode,
-            'Street' => $faker->streetName,
-            'StreetNumber' => $faker->streetAddress,
-            'Mail' => $faker->email,
-            'password' => bcrypt('secret'),
+        DB::table('users')->insert([
+            'name' => 'Thibault',
+            'email' => 'thibault.zenner@gmail.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('test'),
         ]);
-    }}
+    }
 }
