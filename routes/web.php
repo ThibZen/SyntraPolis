@@ -23,7 +23,7 @@ Route::get('/profile/insert','IndexController@insertform')->name('insertform');
 Route::post('/insert','DBController@insert')->name('insert');
 Route::get('/profile/data','DBController@showdata')->name('data');
 //Route::post('/profile/store','IndexController@store')->name('store');
-Route::get('/profile/edit','IndexController@edit')->name('edit');
+Route::get('/profile/edit/{MovieID}','IndexController@editdata')->name('edit');
 Route::post('/update','DBController@update')->name('update');
 
 

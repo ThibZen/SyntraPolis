@@ -12,7 +12,20 @@ class DBController extends Controller
     public function showData()
     {
        $movies = movie::all();
-       return view('includes.dbdata')->with('movies',$movies);
+       return view('includes.showdata')->with('movies',$movies);
+    }
+
+    function updateData($movieid)
+    {
+        $movies = movie::find($movieid);
+        if(count($movies)>0) {
+            return view('includes.showdata')->with('movies',$movies);
+
+        }else{
+           $movies = movie::all();
+            return view('includes.showdata')->with('movies',$movies);
+
+        }
     }
 
     function record_exists_movie ($table, $column, $value)
@@ -165,9 +178,6 @@ class DBController extends Controller
 //            DB::select()
 //        }
 
-//        function update()
-//        {
-//
-//        }
+
     }
 }
