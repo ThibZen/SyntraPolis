@@ -16,7 +16,7 @@
                 <td>{{$movie->Runtime}}</td>
                 <td>{{$movie->ReleaseDate}}</td>
                 <td>{{$movie->Active}}</td>
-                <td><a href="{{route ('edit',$movie['MovieID'])}}"><button>Edit</button></a></td>
+                <td><a href="{{route ('edit',$movie->MovieID)}}"><button>Edit</button></a></td>
             </tr>
 
         @endforeach
