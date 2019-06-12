@@ -19,12 +19,13 @@ Route::get('/contact', 'IndexController@contact')->name('contact');
 Route::get('/profile', 'IndexController@profile')->name('profile');
 
 Route::get('/profile/admin','IndexController@admin')->name('admin');
-Route::get('/profile/insert','IndexController@insertform')->name('insertform');
+Route::get('/profile/insert','IndexController@insertForm')->name('insertform');
 Route::post('/insert','DBController@insert')->name('insert');
-Route::get('/profile/data','DBController@showdata')->name('data');
+
+Route::get('/profile/data','DBController@showData')->name('data');
 //Route::post('/profile/store','IndexController@store')->name('store');
-Route::get('/profile/edit/{MovieID}','IndexController@editdata')->name('edit');
-Route::post('/update','DBController@update')->name('update');
+Route::get('/profile/edit/{MovieID}','IndexController@editData')->name('edit');
+Route::post('/update','DBController@updateData')->name('update');
 
 
 

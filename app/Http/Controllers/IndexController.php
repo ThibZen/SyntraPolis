@@ -93,7 +93,7 @@ class IndexController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function insertform(){
+    public function insertForm(){
         return view('includes.insertform');
     }
 }

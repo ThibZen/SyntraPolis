@@ -11,21 +11,38 @@ class DBController extends Controller
 
     public function showData()
     {
-       $movies = movie::all();
-       return view('includes.showdata')->with('movies',$movies);
+       $data = movie::all();
+       return view('includes.showdata')->with('data',$data);
     }
 
-    function updateData($movieid)
+    function editData($movieid)
     {
-        $movies = movie::find($movieid);
-        if(count($movies)>0) {
-            return view('includes.showdata')->with('movies',$movies);
+        $data = movie::find($movieid);
+        if(count($data)>0) {
+            return view('includes.editdata')->with('data',$data);
 
         }else{
-           $movies = movie::all();
-            return view('includes.showdata')->with('movies',$movies);
+           $data = movie::all();
+            return view('includes.showdata')->with('data',$data);
 
         }
+    }
+
+    function updateData(Request $req)
+    {
+        $movie = new movie();
+
+        $movie->movie_title = $req->input('movie_title');
+        $movie->short_descr = $req->input ('short_descr');
+        $movie->long_descr =  $req->input('long_descr');
+        $movie->runtime = $req->input ('runtime');
+        $movie->releasedate = $req->input ('release_date');
+        $movie->poster = $req->input ('poster');
+        $movie->status = $req->input ('status');
+        $movie->imdb = $req->input ('imdb');
+
+        $movie->save();
+        return redirect()->route('layouts.admin');
     }
 
     function record_exists_movie ($table, $column, $value)
@@ -100,7 +117,8 @@ class DBController extends Controller
     }
 
     //Inserts
-    function movieActorsInsert($movie_id,$actor_id){
+    function movieActorsInsert($movie_id,$actor_id)
+    {
         $sql = "INSERT INTO movieactors (MovieID, ActorID) VALUES (" . $movie_id . "," . $actor_id . ")";
         if (DB::insert($sql)){
             echo " tussentabel actors gelukt";
@@ -141,7 +159,8 @@ class DBController extends Controller
         }
     }
 
-    function insert(Request $req){
+    function insert(Request $req)
+    {
         $movie_title = $req->input('movie_title');
         $short_descr = $req->input ('short_descr');
         $long_descr =  $req->input('long_descr');
@@ -152,7 +171,8 @@ class DBController extends Controller
         $imdb = $req->input ('imdb');
 
 
-        if ($this->record_exists_movie('movie','Title',$movie_title) == true) {
+        if ($this->record_exists_movie('movie','Title',$movie_title) == true)
+        {
             //already in DB
         }else{
             $sqlMovie = "INSERT INTO movie (Title, DescriptionShort, DescriptionLong, Runtime, ReleaseDate, Foto, Status, IMDBLink )

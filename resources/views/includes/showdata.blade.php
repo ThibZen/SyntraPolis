@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 
-@if(count($movies) > 0)
+@if(count($data) > 0)
     <table border="1">
             <tr>
                 <td>Title</td>
@@ -9,8 +9,9 @@
                 <td>ReleaseDate</td>
                 <td>Active</td>
             </tr>
-        @foreach($movies as $movie)
+        @foreach($data as $movie)
             <tr>
+                <td>{{$movie->MovieID}}</td>
                 <td>{{$movie->Title}}</td>
                 <td>{{$movie->Runtime}}</td>
                 <td>{{$movie->ReleaseDate}}</td>
