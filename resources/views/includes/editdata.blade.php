@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-    <form action="{{ route('update') }}" method="post">
-        <input type="hidden" name="MovieID" value="{{ ($movie) ? $movie['MovieID'] : '' }}">
+    <form action="{{ route('update',$movie['id']) }}" method="post">
+        <input type="hidden" name="MovieID" value="{{ ($movie) ? $movie['id'] : '' }}">
         @csrf
     <table border="1">
             <tr>

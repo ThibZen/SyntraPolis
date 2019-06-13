@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin page</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" type="text/css" href={{ URL::asset('../vendor/almasaeed2010/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css') }}>
-    <link rel="stylesheet" type="text/css" href={{ URL::asset('../vendor/almasaeed2010/adminlte/bower_components/Ionicons/css/ionicons.min.css') }}>
-    <link rel="stylesheet" type="text/css" href={{ URL::asset('../vendor/almasaeed2010/adminlte/bower_components/font-awesome/css/font-awesome.min.css') }}>
-    <link rel="stylesheet" type="text/css" href={{ URL::asset('../vendor/almasaeed2010/adminlte/dist/css/AdminLTE.min.css') }}>
-    <link rel="stylesheet" type="text/css" href={{ URL::asset('../vendor/almasaeed2010/adminlte/dist/css/skins/skin-blue.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/ionicons.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/AdminLTE.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/skins/skin-blue.css') }}>
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -40,7 +39,7 @@
 
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <ion-icon name="contact"> x </ion-icon>
                 </div>
                 <div class="pull-left info">
                     <p>Username Admin</p>
@@ -51,7 +50,7 @@
 
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">ADMIN</li>
-                <li class="active">
+                <li class="">
                     <a href='{{route('data')}}'><i class="fa fa-link"></i> <span>View data</span></a>
                 </li>
                 <li>

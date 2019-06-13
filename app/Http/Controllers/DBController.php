@@ -28,11 +28,9 @@ class DBController extends Controller
         }
     }
 
-    function updateData(Request $req)
+    function updateData(Request $req, movie $movie)
     {
-        $movie = new movie();
-
-        $movie->Title = $req->input('movie_title');
+        $movie->Title = $req->input('title');
         $movie->DescriptionShort = $req->input ('short_descr');
         $movie->DescriptionLong =  $req->input('long_descr');
         $movie->Runtime = $req->input ('runtime');
@@ -42,7 +40,13 @@ class DBController extends Controller
         $movie->IMDBLink = $req->input ('imdb');
 
         $movie->save();
-        return redirect()->route('admin');
+        return redirect()->route('data');
+    }
+
+    function deleteData($MovieID)
+    {
+        DB::table('movie')->where('id',$MovieID)->delete();
+        return redirect()->route('data');
     }
 
     function record_exists_movie ($table, $column, $value)
@@ -183,8 +187,7 @@ class DBController extends Controller
                 $this->movieDirectorsInsert($movie_id,$director_id);
                 $this->movieGenreInsert($req, $movie_id);
                 $this->moviePegiInsert($req, $movie_id);
-                return redirect()
-                    ->route('data');
+                return redirect()->route('data');
             } else{
                 echo "ERROR: Could not able to execute $sqlMovie. " . sqlite_last_error();
             }

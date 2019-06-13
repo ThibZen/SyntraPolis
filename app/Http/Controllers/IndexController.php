@@ -96,4 +96,11 @@ class IndexController extends Controller
     public function insertForm(){
         return view('includes.insertform');
     }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function modal(){
+        return view('includes.modal');
+    }
 }
