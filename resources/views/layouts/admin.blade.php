@@ -57,9 +57,6 @@
                 <li>
                     <a href='{{route('insertform')}}'><i class="fa fa-link"></i> <span>Insert movie</span></a>
                 </li>
-                <li>
-                    <a href='{{route('edit')}}'><i class="fa fa-link"></i> <span>Edit/delete</span></a>
-                </li>
 
             </ul>
         </section>

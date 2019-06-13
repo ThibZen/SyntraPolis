@@ -15,9 +15,9 @@ class DBController extends Controller
        return view('includes.showdata')->with('data',$data);
     }
 
-    function editData($movieid)
+    function editData($movie)
     {
-        $data = movie::find($movieid);
+        $data = movie::find($movie);
         if(count($data)>0) {
             return view('includes.editdata')->with('data',$data);
 
