@@ -11,12 +11,12 @@
             </tr>
         @foreach($data as $movie)
             <tr>
-                <td>{{$movie->MovieID}}</td>
+                <td>{{$movie->id}}</td>
                 <td>{{$movie->Title}}</td>
                 <td>{{$movie->Runtime}}</td>
                 <td>{{$movie->ReleaseDate}}</td>
                 <td>{{$movie->Active}}</td>
-                <td><a href="{{route ('edit',$movie->MovieID)}}"><button>Edit</button></a></td>
+                <td><a href="{{route ('edit',$movie->id)}}"><button>Edit</button></a></td>
             </tr>
 
         @endforeach

@@ -15,15 +15,15 @@ class DBController extends Controller
        return view('includes.showdata')->with('data',$data);
     }
 
-    function editData($movie)
+    function editData($MovieID)
     {
-        $data = movie::find($movie);
-        if(count($data)>0) {
-            return view('includes.editdata')->with('data',$data);
+        $movie = movie::find($MovieID);
+        if($movie) {
+            return view('includes.editdata')->with('movie',$movie);
 
         }else{
-           $data = movie::all();
-            return view('includes.showdata')->with('data',$data);
+           $movie = movie::all();
+            return view('includes.showdata')->with('movie',$movie);
 
         }
     }
@@ -32,17 +32,17 @@ class DBController extends Controller
     {
         $movie = new movie();
 
-        $movie->movie_title = $req->input('movie_title');
-        $movie->short_descr = $req->input ('short_descr');
-        $movie->long_descr =  $req->input('long_descr');
-        $movie->runtime = $req->input ('runtime');
-        $movie->releasedate = $req->input ('release_date');
-        $movie->poster = $req->input ('poster');
-        $movie->status = $req->input ('status');
-        $movie->imdb = $req->input ('imdb');
+        $movie->Title = $req->input('movie_title');
+        $movie->DescriptionShort = $req->input ('short_descr');
+        $movie->DescriptionLong =  $req->input('long_descr');
+        $movie->Runtime = $req->input ('runtime');
+        $movie->ReleaseDate = $req->input ('release_date');
+        $movie->Foto = $req->input ('poster');
+        $movie->Status = $req->input ('status');
+        $movie->IMDBLink = $req->input ('imdb');
 
         $movie->save();
-        return redirect()->route('layouts.admin');
+        return redirect()->route('admin');
     }
 
     function record_exists_movie ($table, $column, $value)
@@ -78,7 +78,6 @@ class DBController extends Controller
         $actorlast  = $req->input ('actor_last');
         $actorfull = $actorfirst . ' ' . $actorlast;
         if ($this->record_exists_names('actor', $actorfull) == false) {
-            //RECORD DOESNT EXIST
             $sqlActor = "INSERT INTO actor (FirstName, LastName) VALUES ('$actorfirst','$actorlast')";
             if(DB::insert($sqlActor)){
                 echo " Actor records added successfully.";
@@ -187,7 +186,7 @@ class DBController extends Controller
                 $this->movieGenreInsert($movie_id);
                 $this->moviePegiInsert($movie_id);
                 return redirect()
-                    ->route('layouts.admin');
+                    ->route('admin');
             } else{
                 echo "ERROR: Could not able to execute $sqlMovie. " . sqlite_last_error();
             }

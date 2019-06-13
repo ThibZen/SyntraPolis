@@ -18,6 +18,8 @@ class movie extends Model
         'MovieID', 'Title', 'DescriptionShort', 'DescriptionLong', 'Runtime', 'ReleaseDate', 'Foto', 'Status', 'IMDBLink'
     ];
 
+    public $timestamps = false;
+
 
     /*********************************************************
      *
