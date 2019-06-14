@@ -95,10 +95,31 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function specificMovie() {
+    public function specificMovie()
+    {
         $movies = movie::all();
-
         return view('layouts.specificmovie')
             ->with('movies', $movies);
     }
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function admin(){
+        return view('layouts.admin');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function insertForm(){
+        return view('includes.insertform');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function modal(){
+        return view('includes.modal');
+    }
+
 }

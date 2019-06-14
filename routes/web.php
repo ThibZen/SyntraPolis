@@ -38,5 +38,21 @@ Route::prefix('profile')->middleware('auth')->group(function() {
     Route::get('/', 'IndexController@profile')->name('profile.index');
 });
 
+Route::get('/profile/admin','IndexController@admin')->name('admin');
+Route::get('/profile/insert','IndexController@insertForm')->name('insertform');
+Route::post('/insert','DBController@insert')->name('insert');
+
+Route::get('/profile/data','DBController@showData')->name('data');
+Route::get('/profile/edit/{MovieID?}','DBController@editData')->name('edit');
+Route::get('/delete/{MovieID}','DBController@deleteData')->name('delete');
+
+Route::post('/update/{movie}','DBController@updateData')->name('update');
+Route::post('/modal','indexController@modal')->name('modal');
+
+
+
+
+// Route for Auth + login to the dashboard panel
+Route::get('/login', 'IndexController@login')->name('login');
 
 Route::get('/home', 'HomeController@index')->name('loginSucces');
