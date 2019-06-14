@@ -7,6 +7,7 @@
     margin: 0 auto;
 }
 
+
 .tilecontainer {
     width: 100%;
     min-width: 300px;
@@ -505,5 +506,47 @@ section.text {
     }
 }
 
-/* FORGOT PASS **************************************************/
+/* FORGOT PASSWORD **************************************************/
 
+.forgotpass-form {
+
+    input {
+        margin-bottom: 25px;
+        border: 0;
+        border-bottom: solid 1px $red;
+        background: none;
+        height: 25px;
+        padding-left: 15px;
+        transition: 0.3s all ease-in-out;
+        outline: none;
+        min-width: 250px;
+    }
+
+    .forgotpass-btn {
+        display: flex;
+        justify-content: center;
+
+        button {
+            &[type=submit] {
+                text-transform: uppercase;
+                background-color: $red;
+                width: 70%;
+                font-weight: bold;
+                color: white;
+                border: solid 2px $red;
+                border-radius: 20px;
+                height: 50px;
+                width: 200px;
+                font-size: 10pt;
+                margin-bottom: 10px;
+                transition: 0.3s ease-in-out;
+    
+                &:hover {
+                    cursor: pointer;
+                    color: $red;
+                    background-color: $grey;
+                }
+            }
+        }
+    }
+}
