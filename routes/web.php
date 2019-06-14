@@ -22,7 +22,7 @@ Route::get('/specific/{MovieID}', 'IndexController@specificMovie')->name('specif
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
-Route::get('/register', 'Auth\LoginController@register')->name('register');
+Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 
 // Password Reset Routes...
 Route::prefix('password')->group(function() {
