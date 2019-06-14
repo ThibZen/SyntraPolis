@@ -239,7 +239,7 @@ header {
     width: 100%;
     height: 100%;
     right: 0px;
-    top: 90px;
+    top: 84px;
     background-color: #f25457;
   }
 
@@ -818,10 +818,6 @@ section.text article {
   padding-bottom: 25px;
 }
 
-.profile-container .card-body .loginform {
-  padding-left: 4rem;
-}
-
 .profile-container .card-body .loginform input {
   margin-bottom: 25px;
   border: 0;
@@ -831,20 +827,33 @@ section.text article {
   padding-left: 15px;
   transition: 0.3s all ease-in-out;
   outline: none;
+  min-width: 250px;
 }
 
 .profile-container .card-body .loginform input[type=checkbox] {
   margin: 0;
   margin-right: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 .profile-container .card-body .loginform .form-check {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-bottom: 15px;
 }
 
-.profile-container .card-body .loginform button[type=submit] {
+.profile-container .card-body .loginform .form-check input {
+  min-width: 30px;
+}
+
+.profile-container .card-body .loginform .form-group.loginbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container .card-body .loginform .form-group.loginbtn button[type=submit] {
   text-transform: uppercase;
   background-color: #f25457;
   width: 70%;
@@ -853,13 +862,13 @@ section.text article {
   border: solid 2px #f25457;
   border-radius: 20px;
   height: 50px;
+  width: 175px;
   font-size: 14pt;
-  margin-left: 10px;
   margin-bottom: 10px;
   transition: 0.3s ease-in-out;
 }
 
-.profile-container .card-body .loginform button[type=submit]:hover {
+.profile-container .card-body .loginform .form-group.loginbtn button[type=submit]:hover {
   cursor: pointer;
   color: #f25457;
   background-color: #f5f5f5;
@@ -872,10 +881,11 @@ section.text article {
 
 .profile-container .register {
   text-align: center;
-  margin-left: 20px;
 }
 
 .profile-container .register a {
   color: #f25457;
 }
+
+/* FORGOT PASS **************************************************/
 

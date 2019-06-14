@@ -1,11 +1,11 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="container">
+<div class="profile-container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <h1>Reset password</h1>
 
                 <div class="card-body">
                     @if (session('status'))

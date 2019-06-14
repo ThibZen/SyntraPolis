@@ -430,7 +430,6 @@ section.text {
         padding-bottom: 25px;
 
         .loginform {
-            padding-left: 4rem;
 
             input {
                 margin-bottom: 25px;
@@ -441,38 +440,51 @@ section.text {
                 padding-left: 15px;
                 transition: 0.3s all ease-in-out;
                 outline: none;
+                min-width: 250px;
     
                 &[type=checkbox] {
                    margin: 0;
                    margin-right: 10px;
+                   width: 15px;
+                   height: 15px;
                 }
             }
 
             .form-check {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 padding-bottom: 15px;
+
+                input {
+                    min-width: 30px;
+                }
             }
 
-            button {
-                &[type=submit] {
-                    text-transform: uppercase;
-                    background-color: $red;
-                    width: 70%;
-                    font-weight: bold;
-                    color: white;
-                    border: solid 2px $red;
-                    border-radius: 20px;
-                    height: 50px;
-                    font-size: 14pt;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    transition: 0.3s ease-in-out;
-    
-                    &:hover {
-                        cursor: pointer;
-                        color: $red;
-                        background-color: $grey;
+            .form-group.loginbtn {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    &[type=submit] {
+                        text-transform: uppercase;
+                        background-color: $red;
+                        width: 70%;
+                        font-weight: bold;
+                        color: white;
+                        border: solid 2px $red;
+                        border-radius: 20px;
+                        height: 50px;
+                        width: 175px;
+                        font-size: 14pt;
+                        margin-bottom: 10px;
+                        transition: 0.3s ease-in-out;
+        
+                        &:hover {
+                            cursor: pointer;
+                            color: $red;
+                            background-color: $grey;
+                        }
                     }
                 }
             }
@@ -486,10 +498,12 @@ section.text {
 
     .register {
         text-align: center;
-        margin-left: 20px;
 
         a {
             color: $red;
         }
     }
 }
+
+/* FORGOT PASS **************************************************/
+
