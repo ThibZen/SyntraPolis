@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Client;
+use App\Helper;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -80,4 +83,41 @@ class RegisterController extends Controller
             'Password' => Hash::make($data['Password']),
         ]);
     }
+
+    public function store() {
+        $rules = [
+            'FirstName' => 'required|max:255',
+            'LastName' => 'required|max:255',
+            'City' => 'required|email|max:255|unique:client,email',
+            'Zip' => 'required|max:20',
+            'Street' => 'required|max:20',
+            'StreetNumber' => 'required',
+            'Mail' => 'required|max:255',
+            'Password' => 'required|max:255',
+        ];
+
+
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput(Input::all());
+        } else {
+            $client = new client;
+
+            $client->FirstName                 = Input::get('FirstName');
+            $client->LastName             = Input::get('LastName');
+            $client->City              = Input::get('City');
+            $client->Zip                  = Input::get('Zip');
+            $client->Street                  = Input::get('Street');
+            $client->StreetNumber                 = Input::get('StreetNumber');
+            $client->Mail         = Input::get('Mail');
+            $client->Password          = Hash::make(Input::get('Password'));
+
+            $client->save();
+
+            return redirect()
+                ->route('layouts.home');
+    }}
 }
