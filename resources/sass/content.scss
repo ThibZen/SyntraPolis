@@ -7,6 +7,7 @@
     margin: 0 auto;
 }
 
+
 .tilecontainer {
     width: 100%;
     min-width: 300px;
@@ -415,6 +416,136 @@ section.text {
 
             .maps {
                 width: 100%;
+            }
+        }
+    }
+}
+
+/* LOGIN **************************************************/
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+
+    .card-body {
+        padding-bottom: 25px;
+
+        .loginform {
+
+            input {
+                margin-bottom: 25px;
+                border: 0;
+                border-bottom: solid 1px $red;
+                background: none;
+                height: 25px;
+                padding-left: 15px;
+                transition: 0.3s all ease-in-out;
+                outline: none;
+                min-width: 250px;
+    
+                &[type=checkbox] {
+                   margin: 0;
+                   margin-right: 10px;
+                   width: 15px;
+                   height: 15px;
+                }
+            }
+
+            .form-check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 15px;
+
+                input {
+                    min-width: 30px;
+                }
+            }
+
+            .form-group.loginbtn {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    &[type=submit] {
+                        text-transform: uppercase;
+                        background-color: $red;
+                        width: 70%;
+                        font-weight: bold;
+                        color: white;
+                        border: solid 2px $red;
+                        border-radius: 20px;
+                        height: 50px;
+                        width: 175px;
+                        font-size: 14pt;
+                        margin-bottom: 10px;
+                        transition: 0.3s ease-in-out;
+        
+                        &:hover {
+                            cursor: pointer;
+                            color: $red;
+                            background-color: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-link {
+        color: $red;
+        padding-top: 15px;
+    }
+
+    .register {
+        text-align: center;
+
+        a {
+            color: $red;
+        }
+    }
+}
+
+/* FORGOT PASSWORD **************************************************/
+
+.forgotpass-form {
+
+    input {
+        margin-bottom: 25px;
+        border: 0;
+        border-bottom: solid 1px $red;
+        background: none;
+        height: 25px;
+        padding-left: 15px;
+        transition: 0.3s all ease-in-out;
+        outline: none;
+        min-width: 250px;
+    }
+
+    .forgotpass-btn {
+        display: flex;
+        justify-content: center;
+
+        button {
+            &[type=submit] {
+                text-transform: uppercase;
+                background-color: $red;
+                width: 70%;
+                font-weight: bold;
+                color: white;
+                border: solid 2px $red;
+                border-radius: 20px;
+                height: 50px;
+                width: 200px;
+                font-size: 10pt;
+                margin-bottom: 10px;
+                transition: 0.3s ease-in-out;
+    
+                &:hover {
+                    cursor: pointer;
+                    color: $red;
+                    background-color: $grey;
+                }
             }
         }
     }
