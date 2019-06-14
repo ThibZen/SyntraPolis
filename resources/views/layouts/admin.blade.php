@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin page</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/ionicons.css') }}>
     <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/AdminLTE.css') }}>
     <link rel="stylesheet" type="text/css" href={{ URL::asset('/css/skins/skin-blue.css') }}>
