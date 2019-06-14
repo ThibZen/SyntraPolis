@@ -441,7 +441,7 @@ section.text {
                 padding-left: 15px;
                 transition: 0.3s all ease-in-out;
                 outline: none;
-                min-width: 250px;
+                min-width: 300px;
     
                 &[type=checkbox] {
                    margin: 0;
@@ -539,6 +539,49 @@ section.text {
                 width: 200px;
                 font-size: 10pt;
                 margin-bottom: 10px;
+                transition: 0.3s ease-in-out;
+    
+                &:hover {
+                    cursor: pointer;
+                    color: $red;
+                    background-color: $grey;
+                }
+            }
+        }
+    }
+}
+
+/* REGISTER **************************************************/
+
+.registerform {
+    input {
+        margin-bottom: 25px;
+        border: 0;
+        border-bottom: solid 1px $red;
+        background: none;
+        height: 25px;
+        padding-left: 15px;
+        transition: 0.3s all ease-in-out;
+        outline: none;
+        min-width: 300px;
+    }
+
+    .register-btn {
+        display: flex;
+        justify-content: center;
+
+        button {
+            &[type=submit] {
+                text-transform: uppercase;
+                background-color: $red;
+                font-weight: bold;
+                color: white;
+                border: solid 2px $red;
+                border-radius: 20px;
+                height: 50px;
+                width: 200px;
+                font-size: 12pt;
+                margin-bottom: 14px;
                 transition: 0.3s ease-in-out;
     
                 &:hover {

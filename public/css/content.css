@@ -827,7 +827,7 @@ section.text article {
   padding-left: 15px;
   transition: 0.3s all ease-in-out;
   outline: none;
-  min-width: 250px;
+  min-width: 300px;
 }
 
 .profile-container .card-body .loginform input[type=checkbox] {
@@ -922,6 +922,45 @@ section.text article {
 }
 
 .forgotpass-form .forgotpass-btn button[type=submit]:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
+}
+
+/* REGISTER **************************************************/
+
+.registerform input {
+  margin-bottom: 25px;
+  border: 0;
+  border-bottom: solid 1px #f25457;
+  background: none;
+  height: 25px;
+  padding-left: 15px;
+  transition: 0.3s all ease-in-out;
+  outline: none;
+  min-width: 300px;
+}
+
+.registerform .register-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.registerform .register-btn button[type=submit] {
+  text-transform: uppercase;
+  background-color: #f25457;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  height: 50px;
+  width: 200px;
+  font-size: 12pt;
+  margin-bottom: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.registerform .register-btn button[type=submit]:hover {
   cursor: pointer;
   color: #f25457;
   background-color: #f5f5f5;
