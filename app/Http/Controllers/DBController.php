@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\screening;
 use Illuminate\Http\Request;
 use DB;
 use App\movie;
@@ -190,12 +191,6 @@ class DBController extends Controller
                 echo "ERROR: Could not able to execute $sqlMovie. " . sqlite_last_error();
             }
         }
-
-//        function datePicker
-//        {
-//            DB::select()
-//        }
-
 
     }
 }

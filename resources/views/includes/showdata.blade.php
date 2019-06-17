@@ -35,7 +35,9 @@
                 <td>{{$movie->ReleaseDate}}</td>
                 <td>{{$movie->Active}}</td>
                 <td><a href="{{route ('edit',$movie->id)}}"><button>Edit</button></a></td>
-                <td><a href="#" data-href="{{route ('delete',$movie->id)}}" data-toggle="modal" data-target="#confirm-delete"><button>Delete</button></a></td>
+                <td><a href="{{route ('delete',$movie->id)}}"><button>Delete</button></a></td>
+
+                {{--<td><a href="#" data-href="{{route ('delete',$movie->id)}}" data-toggle="modal" data-target="#confirm-delete"><button>Delete</button></a></td>--}}
             </tr>
         @endforeach
     </table>

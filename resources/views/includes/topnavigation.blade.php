@@ -21,7 +21,7 @@
             <li> Contact </li>
         </a>
         <a href="{{ route('login') }}">
-            <li> Profile </li>
+            <li> Dashboard </li>
         </a>
     </ul>
     <div class="hamburger">
