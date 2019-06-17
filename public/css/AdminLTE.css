@@ -207,6 +207,7 @@ a:focus {
 .main-header .navbar-static-top a.logout {
   position: absolute;
   right: 15px;
+  /*pls work*/
 }
 .main-header .navbar-static-top a.home {
   position: absolute;
