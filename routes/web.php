@@ -46,3 +46,4 @@ Route::prefix('profile')->middleware('auth')->group(function() {
     Route::post('/modal','indexController@modal')->name('modal');
 });
 
+Route::get('/order','IndexController@orderMovie')->name('order');
