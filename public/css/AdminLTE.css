@@ -200,6 +200,19 @@ a:focus {
   min-height: 50px;
   border-radius: 0;
 }
+.main-header .navbar-static-top a {
+  color: white;
+  text-transform: uppercase;
+}
+.main-header .navbar-static-top a.logout {
+  position: absolute;
+  right: 15px;
+  /*pls work*/
+}
+.main-header .navbar-static-top a.home {
+  position: absolute;
+  right: 85px;
+}
 .layout-top-nav .main-header .navbar {
   margin-left: 0;
 }
