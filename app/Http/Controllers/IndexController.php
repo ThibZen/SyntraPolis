@@ -22,10 +22,11 @@ class IndexController extends Controller
     public function home() {
         $movies = movie::all();
         $filter = $movies->sortByDesc('ReleaseDate')->take(8);
-        //dd($filter);
+        //dd($movie);
 
         return view('layouts.home')
-            ->with('filter', $filter);
+            ->with('filter', $filter)
+            ->with('movie', $movies);
     }
 
     /**
@@ -97,19 +98,17 @@ class IndexController extends Controller
      */
     public function specificMovie($MovieID)
     {
-        $movies = movie::find($MovieID);
+        $movie = movie::find($MovieID);
 
+        //dd($movie);
         if($movie) {
             return view('layouts.specificmovie')->with('movie',$movie);
 
         }else{
             $movie = movie::all();
-            return view('includes.showdata')->with('movie',$movie);
+            return view('layouts.home')->with('movie',$movie);
 
         }
-
-        return view('layouts.specificmovie')
-            ->with('movies', $movies);
     }
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
