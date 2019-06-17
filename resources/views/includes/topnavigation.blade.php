@@ -20,8 +20,8 @@
         <a href="{{ route('contact') }}">
             <li> Contact </li>
         </a>
-        <a href="{{ route('login') }}">
-            <li> Profile </li>
+        <a href="{{ route('admin') }}">
+            <li> Dashboard </li>
         </a>
     </ul>
     <div class="hamburger">

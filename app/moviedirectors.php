@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class moviepegi extends Model
+class moviedirectors extends Model
 {
-    protected $table = 'moviepegi';
+    protected $table = 'moviedirectors';
 
     /*********************************************************
      *
@@ -17,9 +17,9 @@ class moviepegi extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function pegi()
+    public function director()
     {
-        return $this->hasOne('App\pegi');
+        return $this->hasOne('App\director');
     }
 
     /**
