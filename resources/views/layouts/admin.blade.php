@@ -20,10 +20,8 @@
 <body class="hold-transition skin-red sidebar-mini">
 <div class="wrapper">
 
-    <!-- Main Header -->
     <header class="main-header">
 
-        <!-- Logo -->
         <a href="{{route('admin')}}" class="logo">
             <span class="logo-mini"><b>S</b>P</span>
             <span class="logo-lg"><b>Syntra</b>Polis</span>
@@ -74,10 +72,6 @@
     </footer>
 
 </div>
-
-
-<!-- REQUIRED JS SCRIPTS -->
-
 
 <link rel="javascript" href={{ URL::asset('../vendor/almasaeed2010/adminlte/bower_components/jquery/dist/jquery.js') }}>
 <link rel="javascript" href={{ URL::asset('../vendor/almasaeed2010/adminlte/bower_components/bootstrap/dist/js/bootstrap.js') }}>

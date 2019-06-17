@@ -21,4 +21,12 @@ class moviegenre extends Model
     {
         return $this->hasOne('App\genre');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function movie()
+    {
+        return $this->hasOne('App\movie');
+    }
 }

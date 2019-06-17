@@ -12,6 +12,7 @@ class functionsController extends Controller {
 
     function datePicker($day)
     {
+
         $pickedMovie = DB::table('screening')
             ->leftJoin('movie', 'screening.MovieID', '=', 'movie.id')
             ->distinct('movie.title')

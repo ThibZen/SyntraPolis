@@ -17,8 +17,16 @@ class movieactors extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function genre()
+    public function actor()
     {
         return $this->hasOne('App\actor');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function movie()
+    {
+        return $this->hasOne('App\movie');
     }
 }
