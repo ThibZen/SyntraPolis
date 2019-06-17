@@ -20,10 +20,12 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function home() {
-        $movies = movie::all()->sortBy('ReleaseDate');
+        $movies = movie::all();
+        $filter = $movies->sortByDesc('ReleaseDate')->take(8);
+        //dd($filter);
 
         return view('layouts.home')
-            ->with('movies', $movies);
+            ->with('filter', $filter);
     }
 
     /**
@@ -32,10 +34,11 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function upcoming() {
-        $movies = movie::all()->sortBy('ReleaseDate');
+        $movies = movie::all();
+        $filter = $movies->sortByDesc('ReleaseDate')->take(3);
 
         return view('layouts.upcoming')
-            ->with('movies', $movies);
+            ->with('filter', $filter);
     }
 
     /**
@@ -44,7 +47,11 @@ class IndexController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function schedule() {
-        return view('layouts.schedule');
+        $movies = movie::all();
+        $filter = $movies->sortByDesc('ReleaseDate')->take(8);
+
+        return view('layouts.schedule')
+            ->with('filter', $filter);
     }
 
     /**
@@ -70,6 +77,15 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
+    public function login() {
+        return view('auth.login');
+    }
+
+    /**
+     *
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function profile() {
         return view('layouts.profile');
     }
@@ -79,14 +95,17 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function login() {
-        return view('auth.login');
+    public function specificMovie()
+    {
+        $movies = movie::all();
+        return view('layouts.specificmovie')
+            ->with('movies', $movies);
     }
-
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function admin(){
+    public function admin()
+    {
         return view('layouts.admin');
     }
 
@@ -103,4 +122,5 @@ class IndexController extends Controller
     public function modal(){
         return view('includes.modal');
     }
+
 }

@@ -4,9 +4,25 @@
 body { 
     overflow-x: hidden;
     background: $lightgrey;
+    font-family: sans-serif;
 }
 
 ul {list-style-type: none;}
+
+h1,h2,h3 { 
+    color: $red;
+    text-align: center;
+}
+
+h1 {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+p { 
+    line-height: 1.8;
+    text-align: justify;
+}
 
 a {
     text-decoration: none;

@@ -1,10 +1,10 @@
 <nav class="topnav">
     <div id="logo">
         <a href="{{ route('home') }}">
-        <img src="/SyntraPolis/public/images/logo.png">
+        <img src="{{ asset('/images/logo.png') }}">
         </a>
     </div>
-    <a href="#">
+    <a href="{{ route('login') }}">
         <i class="fas fa-user"></i>
     </a>
     <ul>
@@ -20,7 +20,7 @@
         <a href="{{ route('contact') }}">
             <li> Contact </li>
         </a>
-        <a href="{{ route('profile') }}">
+        <a href="{{ route('login') }}">
             <li> Profile </li>
         </a>
     </ul>

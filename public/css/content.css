@@ -1,10 +1,28 @@
 body {
   overflow-x: hidden;
   background: #ededed;
+  font-family: sans-serif;
 }
 
 ul {
   list-style-type: none;
+}
+
+h1,
+h2,
+h3 {
+  color: #f25457;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.8;
+  text-align: justify;
 }
 
 a {
@@ -221,7 +239,7 @@ header {
     width: 100%;
     height: 100%;
     right: 0px;
-    top: 90px;
+    top: 84px;
     background-color: #f25457;
   }
 
@@ -375,6 +393,16 @@ footer .socialmedia i:hover {
   color: #ededed;
 }
 
+@media screen and (max-width: 1020px) {
+  footer {
+    width: 100%;
+  }
+
+  footer .socialmedia {
+    margin-right: 25px;
+  }
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -392,16 +420,61 @@ footer .socialmedia i:hover {
 .tilecontainer .movie {
   width: 20%;
   min-width: 140px;
-  padding: 25px 25px 0 25px;
+  height: 100%;
+  position: relative;
+  margin: 25px 25px 0 25px;
 }
 
 .tilecontainer .movie:last-of-type {
   padding-bottom: 50px;
 }
 
+.tilecontainer .movie:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  max-height: 98%;
+  margin-bottom: 0;
+}
+
 .tilecontainer .movie img {
   width: 100%;
   height: auto;
+}
+
+.tilecontainer .movie .overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-height: 0;
+  transition: all ease-in-out 0.5s;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding-bottom: 45px;
+}
+
+.tilecontainer .movie .overlay h2 {
+  opacity: 0.75;
+  margin-top: 10px;
+}
+
+.tilecontainer .movie ul {
+  padding-left: 55px;
+  position: relative;
+  margin-top: -44px;
+}
+
+.tilecontainer .movie ul a {
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.tilecontainer .movie ul a:hover {
+  color: #f25457;
+}
+
+.tilecontainer .movie ul li {
+  padding: 5px 0;
 }
 
 .banner {
@@ -412,5 +485,484 @@ footer .socialmedia i:hover {
 
 .banner img {
   width: 100%;
+}
+
+/* UPCOMING MOVIE **************************************************/
+
+.upcomingcontainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.upcomingcontainer .upcomingmovie {
+  width: 30%;
+}
+
+.upcomingcontainer .upcomingmovie img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1020px) {
+  .upcomingcontainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .upcomingcontainer .upcomingmovie {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .upcomingcontainer .upcomingmovie img {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .upcomingcontainer .upcomingmovie p:first-of-type {
+    border-top: solid 1px #f25457;
+  }
+}
+
+/* SCHEDULE **************************************************/
+
+@media screen and (max-width: 1020px) {
+  .movie ul {
+    float: right;
+  }
+}
+
+/* SPECIFIC MOVIE **************************************************/
+
+.specificcontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding-top: 20px;
+}
+
+.specificcontainer .specificleft {
+  width: 40%;
+}
+
+.specificcontainer .specificleft img {
+  width: 75%;
+  padding-top: 50px;
+}
+
+.specificcontainer .specificleft .showingdays {
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  width: 75%;
+}
+
+.specificcontainer .specificleft .showingdays li {
+  padding: 5px 0;
+}
+
+.specificcontainer .specificleft .orderbtn {
+  text-transform: uppercase;
+  background-color: #f25457;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 75%;
+  margin-bottom: 15px;
+  font-size: 14pt;
+  transition: 0.3s ease-in-out;
+}
+
+.specificcontainer .specificleft .orderbtn:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
+}
+
+.specificcontainer .specificright {
+  width: 55%;
+}
+
+.specificcontainer .specificright h1 {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.specificcontainer .specificright .movieinfo {
+  background-color: #f5f5f5;
+  padding: 1px 0 1px 10px;
+}
+
+.specificcontainer .specificright article p {
+  text-align: left;
+}
+
+.specificcontainer .specificright .text article {
+  width: 100%;
+}
+
+.specificcontainer .specificright .text article p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1020px) {
+  .specificcontainer {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .specificcontainer .specificleft,
+  .specificcontainer .specificright {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .specificcontainer .specificleft {
+    border-bottom: solid 1px #f25457;
+  }
+
+  .specificcontainer .specificleft img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .specificcontainer .specificleft .showingdays {
+    margin: 0 auto;
+  }
+
+  .specificcontainer .specificleft .orderbtn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ABOUT **************************************************/
+
+section.text {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.text article {
+  width: 45%;
+}
+
+@media screen and (max-width: 1020px) {
+  section.text {
+    flex-direction: column;
+  }
+
+  section.text article {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* CONTACT **************************************************/
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .contactleft {
+  width: 50%;
+}
+
+.contact .contactleft article {
+  padding-bottom: 75px;
+}
+
+.contact .contactleft article p {
+  margin-top: 0;
+}
+
+.contact .contactleft .contactform {
+  width: 100%;
+}
+
+.contact .contactleft .contactform label {
+  padding-bottom: 5px;
+  display: block;
+}
+
+.contact .contactleft .contactform input,
+.contact .contactleft .contactform textarea {
+  width: 65%;
+}
+
+.contact .contactleft .contactform input:focus,
+.contact .contactleft .contactform textarea:focus {
+  outline: none;
+  background: #f5f5f5;
+  border-bottom-color: salmon;
+}
+
+.contact .contactleft .contactform input {
+  margin-bottom: 25px;
+  border: 0;
+  border-bottom: solid 1px #f25457;
+  background: none;
+  height: 25px;
+  padding-left: 15px;
+  transition: 0.3s all ease-in-out;
+}
+
+.contact .contactleft .contactform input[type=submit] {
+  text-transform: uppercase;
+  background-color: #f25457;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  height: 50px;
+  font-size: 14pt;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact .contactleft .contactform input[type=submit]:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
+}
+
+.contact .contactleft .contactform textarea {
+  border: 0;
+  font-family: sans-serif;
+  border-bottom: solid 1px #f25457;
+  background-color: #f5f5f5;
+  min-height: 75px;
+  margin-bottom: 25px;
+  padding-top: 10px;
+}
+
+.contact .contactright {
+  width: 60%;
+}
+
+.contact .contactright .maps {
+  width: 90%;
+  margin-bottom: 25px;
+  float: right;
+}
+
+.contact .contactright .contactinfo {
+  text-align: center;
+}
+
+.contact .contactright .contactinfo h3 {
+  font-size: 18pt;
+  margin: 0;
+  padding: 0 0 5px 30px;
+}
+
+.contact .contactright .contactinfo a {
+  color: #f25457;
+  padding-left: 30px;
+}
+
+.contact .contactright .contactinfo p {
+  text-align: center;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+.contact .contactright .contactinfo ul li {
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 1020px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .contactleft {
+    width: 100%;
+  }
+
+  .contact .contactleft article {
+    padding-bottom: 30px;
+  }
+
+  .contact .contactright {
+    width: 100%;
+  }
+
+  .contact .contactright .maps {
+    width: 100%;
+  }
+}
+
+/* LOGIN **************************************************/
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container .card-body {
+  padding-bottom: 25px;
+}
+
+.profile-container .card-body .loginform input {
+  margin-bottom: 25px;
+  border: 0;
+  border-bottom: solid 1px #f25457;
+  background: none;
+  height: 25px;
+  padding-left: 15px;
+  transition: 0.3s all ease-in-out;
+  outline: none;
+  min-width: 300px;
+}
+
+.profile-container .card-body .loginform input[type=checkbox] {
+  margin: 0;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.profile-container .card-body .loginform .form-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.profile-container .card-body .loginform .form-check input {
+  min-width: 30px;
+}
+
+.profile-container .card-body .loginform .form-group.loginbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container .card-body .loginform .form-group.loginbtn button[type=submit] {
+  text-transform: uppercase;
+  background-color: #f25457;
+  width: 70%;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  height: 50px;
+  width: 175px;
+  font-size: 14pt;
+  margin-bottom: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.profile-container .card-body .loginform .form-group.loginbtn button[type=submit]:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
+}
+
+.profile-container .btn-link {
+  color: #f25457;
+  padding-top: 15px;
+}
+
+.profile-container .register {
+  text-align: center;
+}
+
+.profile-container .register a {
+  color: #f25457;
+}
+
+/* FORGOT PASSWORD **************************************************/
+
+.forgotpass-form input {
+  margin-bottom: 25px;
+  border: 0;
+  border-bottom: solid 1px #f25457;
+  background: none;
+  height: 25px;
+  padding-left: 15px;
+  transition: 0.3s all ease-in-out;
+  outline: none;
+  min-width: 250px;
+}
+
+.forgotpass-form .forgotpass-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.forgotpass-form .forgotpass-btn button[type=submit] {
+  text-transform: uppercase;
+  background-color: #f25457;
+  width: 70%;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  height: 50px;
+  width: 200px;
+  font-size: 10pt;
+  margin-bottom: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.forgotpass-form .forgotpass-btn button[type=submit]:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
+}
+
+/* REGISTER **************************************************/
+
+.registerform input {
+  margin-bottom: 25px;
+  border: 0;
+  border-bottom: solid 1px #f25457;
+  background: none;
+  height: 25px;
+  padding-left: 15px;
+  transition: 0.3s all ease-in-out;
+  outline: none;
+  min-width: 300px;
+}
+
+.registerform .register-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.registerform .register-btn button[type=submit] {
+  text-transform: uppercase;
+  background-color: #f25457;
+  font-weight: bold;
+  color: white;
+  border: solid 2px #f25457;
+  border-radius: 20px;
+  height: 50px;
+  width: 200px;
+  font-size: 12pt;
+  margin-bottom: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.registerform .register-btn button[type=submit]:hover {
+  cursor: pointer;
+  color: #f25457;
+  background-color: #f5f5f5;
 }
 

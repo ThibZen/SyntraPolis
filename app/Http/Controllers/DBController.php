@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\screening;
 use Illuminate\Http\Request;
 use DB;
 use App\movie;
@@ -63,11 +64,9 @@ class DBController extends Controller
 
     function record_exists_names ($table, $value)
     {
-//        $result = DB::select("SELECT * FROM {$table} WHERE",DB::raw("CONCAT(FirstName,' ',LastName) LIKE '%$value%'"))->fetch_all()[0];
         $result = DB::table('$table')
             ->select('*')
             ->where(DB::raw("CONCAT(FirstName,' ',LastName)", '=',  '%$value%'));
-//        $result1 = $result->fetch_all()[0];
         if(sizeof($result->bindings["select"]) == 0) {
             return false;
         } else {
@@ -192,12 +191,6 @@ class DBController extends Controller
                 echo "ERROR: Could not able to execute $sqlMovie. " . sqlite_last_error();
             }
         }
-
-//        function datePicker
-//        {
-//            DB::select()
-//        }
-
 
     }
 }
