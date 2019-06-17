@@ -19,10 +19,10 @@
     </div>
 
 @if(count($data) > 0)
-    <table border="1">
+    <table class="data" border="1">
             <tr>
                 <td>ID</td>
-                <td>Title</td>
+                <td class="dataTitle">Title</td>
                 <td>Runtime</td>
                 <td>ReleaseDate</td>
                 <td>Active</td>
