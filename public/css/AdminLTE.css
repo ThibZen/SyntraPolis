@@ -200,6 +200,18 @@ a:focus {
   min-height: 50px;
   border-radius: 0;
 }
+.main-header .navbar-static-top a {
+  color: white;
+  text-transform: uppercase;
+}
+.main-header .navbar-static-top a.logout {
+  position: absolute;
+  right: 15px;
+}
+.main-header .navbar-static-top a.home {
+  position: absolute;
+  right: 85px;
+}
 .layout-top-nav .main-header .navbar {
   margin-left: 0;
 }
@@ -234,6 +246,10 @@ a:focus {
   }
 }
 @media (max-width: 767px) {
+  .main-header .navbar-static-top {
+    display: flex;
+    justify-content: center;
+  }
   .main-header .navbar-right {
     float: none;
   }
@@ -2640,6 +2656,24 @@ a:focus {
  * Component: Table
  * ----------------
  */
+.data {
+  border: solid 1px #dd4b39;
+}
+
+.data td {
+  min-width: 50px;
+  text-align: center;
+}
+
+.data tr td:nth-child(2) {
+  text-align: left;
+  padding: 0 5px;
+}
+
+.data tr td.dataTitle {
+  text-align: center;
+}
+
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
@@ -4974,4 +5008,29 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal !important;
   }
+}
+
+button {
+  background: #dd4b39;
+  color: white;
+  border: 3px solid #dd4b39;
+}
+
+.insertdata p {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.insertdata p input[type=text],
+.insertdata p textarea {
+  width: 70%;
+}
+
+.insertdata p input[type="date"] {
+  width: 40%;
+}
+
+.insertdata p select {
+  width: 40%;
 }
