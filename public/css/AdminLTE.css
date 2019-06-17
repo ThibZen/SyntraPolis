@@ -5015,3 +5015,22 @@ button {
   color: white;
   border: 3px solid #dd4b39;
 }
+
+.insertdata p {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.insertdata p input[type=text],
+.insertdata p textarea {
+  width: 70%;
+}
+
+.insertdata p input[type="date"] {
+  width: 40%;
+}
+
+.insertdata p select {
+  width: 40%;
+}
