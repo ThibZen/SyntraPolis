@@ -95,9 +95,19 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function specificMovie()
+    public function specificMovie($MovieID)
     {
-        $movies = movie::all();
+        $movies = movie::find($MovieID);
+
+        if($movie) {
+            return view('layouts.specificmovie')->with('movie',$movie);
+
+        }else{
+            $movie = movie::all();
+            return view('includes.showdata')->with('movie',$movie);
+
+        }
+
         return view('layouts.specificmovie')
             ->with('movies', $movies);
     }
