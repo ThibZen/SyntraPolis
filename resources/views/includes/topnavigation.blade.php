@@ -20,7 +20,7 @@
         <a href="{{ route('contact') }}">
             <li> Contact </li>
         </a>
-        <a href="{{ route('login') }}">
+        <a href="{{ route('admin') }}">
             <li> Dashboard </li>
         </a>
     </ul>

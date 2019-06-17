@@ -3,12 +3,13 @@
 
     <title>Insert Form</title>
 
-    <form action="{{ action('DBController@insert') }}" method="post">
+    <form class="insertdata" action="{{ action('DBController@insert') }}" method="post">
         @csrf
         <p>
             <label for="movietitle">Movie title:</label>
             <input type="text" name="movie_title" id="movietitle">
         </p>
+        <p></p>
         <p>
             <label for="shortdescr">Short description:</label>
             <input type="text" name="short_descr" id="shortdescr">
@@ -19,29 +20,38 @@
         </p>
         <p>
             <label for="runtime">Runtime:</label>
-            <input type="text" name="runtime" id="runtime"> minutes
+            <input type="text" name="runtime" id="runtime">
         </p>
         <p>
             <label for="releasedate">Release date:</label>
             <input type="date" name="release_date" id="releasedate">
         </p>
+        <p></p>
         <p>
             <label for="director">Director(s):</label>
+        </p>
+        <p>
             <label for="director">Firstname:</label>
             <input type="text" name="director_first" id="directorfirst">
+        </p>
+        <p>
             <label for="director">Lastname:</label>
             <input type="text" name="director_last" id="directorlast">
         </p>
+        <p></p>
         <p>
             <label for="actor">Actor(s):</label>
+        </p>
+        <p>
             <label for="actor">Firstname:</label>
             <input type="text" name="actor_first" id="actorfirst">
+        </p>
+        <p>
             <label for="actor">Lastname:</label>
             <input type="text" name="actor_last" id="actorlast">
         </p>
+        <p></p>
         <p>
-        <table class="table table-bordered" id="dynamic_field">
-            <tr>
                 <label for="genre">Genre(s):</label>
                 <select name="genre">
                     <option value="2">Action</option>
@@ -68,8 +78,6 @@
                     <option value="22">Western</option>
                 </select>
                 {{--<button name="add" id="add" class="btn btn-success">Add More</button>--}}
-            </tr>
-        </table>
         </p>
         <p>
             <label for="pegi">Pegi:</label>
@@ -91,6 +99,7 @@
             <label for="poster">Poster File Number:</label>
             <input type="text" name="poster" id="poster">
         </p>
+        <p></p>
         <p>
             <label for="status">Status:</label>
             <input type="text" name="status" id="status">
