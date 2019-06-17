@@ -101,6 +101,19 @@ class IndexController extends Controller
         return view('layouts.specificmovie')
             ->with('movies', $movies);
     }
+
+    /**
+     *
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function orderMovie()
+    {
+        $movies = movie::all();
+        return view('layouts.ordermovie')
+            ->with('movies', $movies);
+    }
+
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
