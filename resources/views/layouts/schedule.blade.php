@@ -9,7 +9,7 @@
         <section class="tilecontainer">
                 @foreach($filter as $filter)
                 <div class="movie">
-                        <a href="#">
+                        <a href="{{ route('specificMovie',$filter->id) }}">
                                 <img src="{{ asset('/images/Poster/'.$filter->Foto.'.jpg') }}">
                         </a>
                         <p> Time </p>

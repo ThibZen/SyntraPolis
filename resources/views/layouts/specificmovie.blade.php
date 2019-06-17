@@ -4,7 +4,7 @@
 @section('content')
         <div class="specificcontainer">
         <section class="specificright">
-                <h1> {{$movies[0]->Title}} </h1>
+                <h1> {{$movie->Title}} </h1>
                 <article class="movieinfo">
                     <p>
                         Director: John Doe
@@ -13,7 +13,7 @@
                         Actors: John Doe, John Doe, John Doe
                     </p>
                     <p>
-                        Genre: Action 
+                        Genre: Action
                     </p>
                     <p>
                         Runtime: 90min
@@ -25,15 +25,15 @@
                 <section class="text">
                         <article>
                         <p>
-                                {{$movies[0]->DescriptionLong}}
+                                {{$movie->DescriptionLong}}
                         </p>
                         </article>
                 </section>
         </section>
         <section class="specificleft">
-                <img src="{{ asset('/images/Poster/'.$movies[0]->Foto.'.jpg') }}">
+                <img src="{{ asset('/images/Poster/'.$movie->Foto.'.jpg') }}">
                 <ul class="showingdays">
-                        <?php 
+                        <?php
                                 $date = date('d-m-Y');
                                 $weekOfdays = array();
                         ?>
@@ -43,7 +43,7 @@
                         @endfor
 
                         @foreach ($weekOfdays as $day)
-                                <li> 
+                                <li>
                                 {{$day}}
                                 </li>
                         @endforeach
