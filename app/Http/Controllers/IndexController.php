@@ -22,7 +22,7 @@ class IndexController extends Controller
     public function home() {
         $movies = movie::all();
         $filter = $movies->sortByDesc('ReleaseDate')->take(8);
-        //dd($filter);
+//        dd($filter);
 
         return view('layouts.home')
             ->with('filter', $filter);
