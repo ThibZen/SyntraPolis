@@ -34,6 +34,19 @@ footer {
         }
     }
 
+    .policies {
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 150px;
+        margin-top: 35px;
+        a {
+            float: left;
+            padding-left: 15px;
+        }
+    }
+
     .socialmedia {
         float: right;
         font-size: 20pt;
@@ -52,6 +65,16 @@ footer {
 @include mobile {
     footer {
         width: 100%;
+
+        .policies {
+            margin: 0 auto;
+            width: unset;
+            position: relative;
+            a {
+                float: left;
+                padding-left: 15px;
+            }
+        }
 
         .socialmedia {
             margin-right: 25px;

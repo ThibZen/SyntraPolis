@@ -451,6 +451,19 @@ section.text {
                 }
             }
 
+            .form-group {
+                &:first-of-type {
+                    .col-md-6 {
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+                    
+                    .invalid-feedback {
+
+                    }
+                }
+            }
+
             .form-check {
                 display: flex;
                 align-items: center;

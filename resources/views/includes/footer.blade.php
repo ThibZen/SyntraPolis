@@ -5,6 +5,10 @@
         <input type="text" placeholder="john.doe@example.com">
         <input type="submit" value="Sign up">
     </form>
+    <div class="policies">
+        <a href="https://www.freeprivacypolicy.com/privacy/view/bc234eae80e861d12d2e7cd13c2c2832" target="_blank"> Privacy Policy </a>
+        <a href="https://www.cookiepolicygenerator.com/live.php?token=OB3HoLTzKx34Sx7CbiGIFkzZELDXzZxt"> Cookie Disclaimer </a>
+    </div>
     <div class="socialmedia">
         <a href="https://www.instagram.com">
             <i class="fab fa-instagram"></i>

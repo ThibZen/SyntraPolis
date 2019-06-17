@@ -379,6 +379,20 @@ footer form input[type=submit] {
   font-weight: bold;
 }
 
+footer .policies {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 150px;
+  margin-top: 35px;
+}
+
+footer .policies a {
+  float: left;
+  padding-left: 15px;
+}
+
 footer .socialmedia {
   float: right;
   font-size: 20pt;
@@ -396,6 +410,17 @@ footer .socialmedia i:hover {
 @media screen and (max-width: 1020px) {
   footer {
     width: 100%;
+  }
+
+  footer .policies {
+    margin: 0 auto;
+    width: unset;
+    position: relative;
+  }
+
+  footer .policies a {
+    float: left;
+    padding-left: 15px;
   }
 
   footer .socialmedia {
@@ -835,6 +860,11 @@ section.text article {
   margin-right: 10px;
   width: 15px;
   height: 15px;
+}
+
+.profile-container .card-body .loginform .form-group:first-of-type .col-md-6 {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .profile-container .card-body .loginform .form-check {
