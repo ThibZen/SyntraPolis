@@ -19,7 +19,7 @@
     <section class="tilecontainer">
     @foreach ($filter as $filter)
         <div class="movie ">
-            <a href="#">
+            <a href="{{ route('specificMovie',$filter->id) }}">
                 <div class="overlay">
                     <h2>{{$filter->Title}}</h2>
                 </div>
