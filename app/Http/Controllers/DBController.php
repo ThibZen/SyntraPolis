@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\screening;
+use App\movieactor;
+use App\moviedirector;
 use Illuminate\Http\Request;
 use DB;
 use App\movie;
@@ -12,15 +13,18 @@ class DBController extends Controller
 
     public function showData()
     {
-       $data = movie::all();
+       $data = movie::with('movieactor','moviedirector','moviegenre')->get();
+//       $data = movie::all();
        return view('includes.showdata')->with('data',$data);
     }
 
     function editData($MovieID)
     {
         $movie = movie::find($MovieID);
+        $actor = movieactor::find($MovieID);
+        $director = moviedirector::find($MovieID);
         if($movie) {
-            return view('includes.editdata')->with('movie',$movie);
+            return view('includes.editdata')->with('movie',$movie)->with('movieactor',$actor)->with('moviedirector',$director);
 
         }else{
            $movie = movie::all();
@@ -47,6 +51,10 @@ class DBController extends Controller
     function deleteData($MovieID)
     {
         DB::table('movie')->where('id',$MovieID)->delete();
+//        DB::table('movieactor')->where('id',$MovieID)->delete();
+//        DB::table('moviedirector')->where('id',$MovieID)->delete();
+//        DB::table('moviegenre')->where('id',$MovieID)->delete();
+//        DB::table('moviepegi')->where('id',$MovieID)->delete();
         return redirect()->route('data');
     }
 
@@ -119,7 +127,7 @@ class DBController extends Controller
     //Inserts
     function movieActorsInsert($movie_id,$actor_id)
     {
-        $sql = "INSERT INTO movieactors (MovieID, ActorID) VALUES (" . $movie_id . "," . $actor_id . ")";
+        $sql = "INSERT INTO movieactor (MovieID, ActorID) VALUES (" . $movie_id . "," . $actor_id . ")";
         if (DB::insert($sql)){
             echo " tussentabel actors gelukt";
         } else {
@@ -129,7 +137,7 @@ class DBController extends Controller
 
     function movieDirectorsInsert($movie_id,$director_id)
     {
-        $sql = "INSERT INTO moviedirectors (MovieID, DirectorID) VALUES (" . $movie_id . "," . $director_id . ")";
+        $sql = "INSERT INTO moviedirector (MovieID, DirectorID) VALUES (" . $movie_id . "," . $director_id . ")";
         if (DB::insert($sql)){
             echo " tussentabel directors gelukt";
         } else {

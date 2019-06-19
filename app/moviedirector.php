@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class moviedirectors extends Model
+class moviedirector extends Model
 {
-    protected $table = 'moviedirectors';
+    protected $table = 'moviedirector';
 
     /*********************************************************
      *
