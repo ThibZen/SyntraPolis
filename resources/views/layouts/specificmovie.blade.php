@@ -32,7 +32,7 @@
         </section>
         <section class="specificleft">
                 <img src="{{ asset('/images/Poster/'.$movie->Foto.'.jpg') }}">
-                <ul class="showingdays">
+                <!--<ul class="showingdays">
                         <?php
                                 $date = date('d-m-Y');
                                 $weekOfdays = array();
@@ -47,7 +47,7 @@
                                 {{$day}}
                                 </li>
                         @endforeach
-                </ul>
+                </ul>-->
                 <div class="orderbtn">
                         Order
                 </div>
