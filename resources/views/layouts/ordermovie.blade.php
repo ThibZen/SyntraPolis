@@ -6,7 +6,7 @@
 <form class="orderform" autocomplete="off" action="{{ route('orderStore') }}" method="POST">
         @csrf
         <label for="title">Title</label>
-        <input name="Title" id="title" type="text" placeholder="Title" autocomplete="off" value="{{ $movie->Title }}" onkeypress="return false;"><br>
+        <input name="Title" id="title" type="text" placeholder="Title" autocomplete="off" value="{{ $movie->Title }}" disabled="disabled"><br>
 
         <label for="date">Date</label>
         <input name="Date" id="date" type="text" placeholder="Choose Date" autocomplete="off" value="{{ old('Date') }}"><br>
