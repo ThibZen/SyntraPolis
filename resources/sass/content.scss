@@ -606,3 +606,56 @@ section.text {
         }
     }
 }
+
+/* REGISTER **************************************************/
+
+.orderform {
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        margin-bottom: 25px;
+        border: 0;
+        border-bottom: solid 1px $red;
+        background: none;
+        height: 25px;
+        padding-left: 15px;
+        transition: 0.3s all ease-in-out;
+        outline: none;
+        min-width: 300px;
+        width: 30%;
+
+        &[type=submit] {
+            text-transform: uppercase;
+            background-color: $red;
+            font-weight: bold;
+            color: white;
+            border: solid 2px $red;
+            border-radius: 20px;
+            height: 50px;
+            width: 200px;
+            font-size: 12pt;
+            margin-bottom: 14px;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                color: $red;
+                background-color: $grey;
+            }
+        }
+    }
+
+    select {
+        max-width: 80px;
+        margin: 5px 0 25px 15px;
+        outline: none;
+
+        &#tickets {
+            margin-bottom: 0px;
+            max-width: 35px;
+        }
+    }
+}
