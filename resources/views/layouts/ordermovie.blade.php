@@ -2,15 +2,23 @@
 @extends('layouts.default')
 
 @section('content')
-<form autocomplete="off" method="POST">
+<h1>Order your movie</h1>
+<form class="orderform" autocomplete="off" method="POST">
+        @csrf
         <label for="title">Title</label>
-        <input name="Title" id="title" type="text" placeholder="Title" autocomplete="off" value="{{ old('Title') }}"><br>
+        <input name="Title" id="title" type="text" placeholder="Title" autocomplete="off" value="{{ old('Title') }}" onkeypress="return false;"><br>
 
         <label for="date">Date</label>
-        <input name="Date" id="date" type="text" placeholder="" autocomplete="off" value="{{ old('Date') }}"><br>
+        <input name="Date" id="date" type="text" placeholder="Choose Date" autocomplete="off" value="{{ old('Date') }}"><br>
 
-        <label for="date">Screening Time</label>
-        <input name="ScreeningTime" id="screeningtime" type="text" placeholder="18:00" autocomplete="off"><br>
+        <label for="screening_time">Screening Time</label>
+        <select name="screening_time">
+                <option value="1"> 17:00h </option>
+                <option value="2"> 18:00h </option>
+                <option value="3"> 19:00h </option>
+                <option value="4"> 20:00h </option>
+                <option value="5"> 21:00h </option>
+        </select>
 
         <label for="title">First Name</label>
         <input name="firstname" id="firstname" type="text" placeholder="John" autocomplete="off" value="{{ old('firstname') }}"><br>
@@ -20,9 +28,6 @@
     
         <label for="email">Email Adress</label>
         <input name="email" id="email" type="email" placeholder="john.doe@example.com" autocomplete="off" value="{{ old('email') }}"><br>
-    
-        <label for="auditorium">Auditorium</label>
-        <input name="auditorium" id="auditorium" type="text" placeholder="" autocomplete="off" value="{{ old('Auditorium') }}"><br>
 
         <label for="tickets">Number of Tickets</label>
         <select name="tickets" id="tickets">
