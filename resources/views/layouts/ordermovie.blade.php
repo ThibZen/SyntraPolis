@@ -2,6 +2,7 @@
 @extends('layouts.default')
 
 @section('content')
+<h1> Order your movie </h1>
 <form class="orderform" autocomplete="off" action="{{ route('orderStore') }}" method="POST">
         @csrf
         <label for="title">Title</label>
