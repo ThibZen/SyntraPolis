@@ -11,6 +11,7 @@ use App\moviepegi;
 use App\pricing;
 use App\screening;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class IndexController extends Controller
 {
@@ -123,7 +124,19 @@ class IndexController extends Controller
             ->with('movies', $movies);
     }
 
-    /**
+    public function orderStore(){
+        $input = Input::all();
+
+        return redirect()
+            ->route('orderConfirmed');
+    }
+
+    public function orderConfirmed() {
+       return view('orderConfirmed');
+    }
+
+
+        /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function admin()
@@ -144,5 +157,6 @@ class IndexController extends Controller
     public function modal(){
         return view('includes.modal');
     }
+
 
 }
