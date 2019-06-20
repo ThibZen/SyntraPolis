@@ -2,8 +2,7 @@
 @extends('layouts.default')
 
 @section('content')
-<h1>Order your movie</h1>
-<form class="orderform" autocomplete="off" method="POST">
+<form class="orderform" autocomplete="off" action="{{ route('orderStore') }}" method="POST">
         @csrf
         <label for="title">Title</label>
         <input name="Title" id="title" type="text" placeholder="Title" autocomplete="off" value="{{ old('Title') }}" onkeypress="return false;"><br>
@@ -22,10 +21,10 @@
 
         <label for="title">First Name</label>
         <input name="firstname" id="firstname" type="text" placeholder="John" autocomplete="off" value="{{ old('firstname') }}"><br>
-    
+
         <label for="lastname">Last Name</label>
         <input name="lastname" id="lastname" type="text" placeholder="Doe" autocomplete="off" value="{{ old('lastname') }}"><br>
-    
+
         <label for="email">Email Adress</label>
         <input name="email" id="email" type="email" placeholder="john.doe@example.com" autocomplete="off" value="{{ old('email') }}"><br>
 
@@ -41,8 +40,7 @@
                 <option value="8"> 8 </option>
                 <option value="9"> 9 </option>
         </select><br>
-
         <br><br>
         <input type="submit" value="Send">
-    </form>
+</form>
 @endsection
