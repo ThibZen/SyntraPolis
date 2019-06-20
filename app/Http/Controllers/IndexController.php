@@ -117,11 +117,17 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function orderMovie()
+    public function orderMovie($MovieID)
     {
-        $movies = movie::all();
-        return view('layouts.ordermovie')
-            ->with('movies', $movies);
+        $movie = movie::find($MovieID);
+        //dd($movie);
+
+        if($movie) {
+            return view('layouts.ordermovie')->with('movie', $movie);
+        }else{
+            $movie = movie::all();
+            return view('layouts.home')->with('movie',$movie);
+        }
     }
 
     public function orderStore(){

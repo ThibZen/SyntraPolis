@@ -49,7 +49,7 @@
                         @endforeach
                 </ul>-->
                 <div class="orderbtn">
-                        Order
+                    <a href="{{route('order',$movie->id)}}">Order</a>
                 </div>
         </section>
         </div>
