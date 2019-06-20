@@ -8,6 +8,10 @@ class screening extends Model
 {
     protected $table = 'screening';
 
+    protected $fillable = [
+        'id','movie_id'
+    ];
+
     /*********************************************************
      *
      * RELATIONSHIP METHODS
@@ -36,5 +40,9 @@ class screening extends Model
     public function seatreserved()
     {
         return $this->hasMany('App\seatreserved');
+    }
+
+    public function movie(){
+        return $this->belongsToMany('App\movie');
     }
 }

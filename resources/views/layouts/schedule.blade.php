@@ -12,7 +12,7 @@
                         <a href="{{ route('specificMovie',$filter->id) }}">
                                 <img src="{{ asset('/images/Poster/'.$filter->Foto.'.jpg') }}">
                         </a>
-                        <p> Time </p>
+                        <!--<p> Time </p>-->
                         <ul>
                             <a href="#">
                                 <li> {{$filter->ScreeningStartTime}} </li>

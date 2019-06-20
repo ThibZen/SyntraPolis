@@ -52,6 +52,7 @@ class IndexController extends Controller
         $movies = movie::all();
         $filter = $movies->sortByDesc('ReleaseDate')->take(8);
 
+
         return view('layouts.schedule')
             ->with('filter', $filter);
     }
@@ -124,21 +125,21 @@ class IndexController extends Controller
 
         if($movie) {
             return view('layouts.ordermovie')->with('movie', $movie);
-        }else{
-            $movie = movie::all();
-            return view('layouts.home')->with('movie',$movie);
         }
     }
 
-    public function orderStore(){
+    public function orderStore() {
         $input = Input::all();
 
-        return redirect()
-            ->route('orderConfirmed');
+        return view('layouts.orderConfirmed')
+            ->with('input', $input);
+
     }
 
-    public function orderConfirmed() {
-       return view('orderConfirmed');
+    public function orderConfirmed($input){
+        $input = $input;
+        return view('layouts.orderConfirmed')
+            ->with('input', $input);
     }
 
 

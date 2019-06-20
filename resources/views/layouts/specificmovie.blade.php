@@ -16,7 +16,7 @@
                         Genre: Action
                     </p>
                     <p>
-                        Runtime: 90min
+                        Runtime: {{$movie->Runtime}}
                     </p>
                     <p>
                         Pegi Rating: PEGI 13 <img>
@@ -25,7 +25,7 @@
                 <section class="text">
                         <article>
                         <p>
-                                {{$movie->DescriptionLong}}
+                            {{$movie->DescriptionLong}}
                         </p>
                         </article>
                 </section>
