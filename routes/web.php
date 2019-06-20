@@ -17,6 +17,9 @@ Route::get('/schedule', 'IndexController@schedule')->name('schedule');
 Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
 Route::get('/specific/{MovieID?}', 'IndexController@specificMovie')->name('specificMovie');
+Route::get('/order','IndexController@orderMovie')->name('order');
+Route::post('/order','IndexController@orderStore')->name('orderStore');
+Route::get('/order/confirmed','IndexController@orderConfirmed')->name('orderConfirmed');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -46,4 +49,3 @@ Route::prefix('profile')->middleware('auth')->group(function() {
     Route::post('/modal','indexController@modal')->name('modal');
 });
 
-Route::get('/order','IndexController@orderMovie')->name('order');
