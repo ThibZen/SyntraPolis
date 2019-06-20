@@ -18,7 +18,7 @@ Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
 Route::get('/specific/{MovieID?}', 'IndexController@specificMovie')->name('specificMovie');
 Route::get('/order/{MovieID?}','IndexController@orderMovie')->name('order');
-Route::post('/order','IndexController@orderStore')->name('orderStore');
+Route::post('/order/store','IndexController@orderStore')->name('orderStore');
 Route::get('/order/confirmed','IndexController@orderConfirmed')->name('orderConfirmed');
 
 // Authentication Routes...

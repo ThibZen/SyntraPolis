@@ -15,7 +15,7 @@ class movie extends Model
      */
 
     protected $fillable = [
-        'MovieID', 'Title', 'DescriptionShort', 'DescriptionLong', 'Runtime', 'ReleaseDate', 'Foto', 'Status', 'IMDBLink'
+        'id', 'Title', 'DescriptionShort', 'DescriptionLong', 'Runtime', 'ReleaseDate', 'Foto', 'Status', 'IMDBLink',
     ];
 
     public $timestamps = false;
@@ -67,7 +67,7 @@ class movie extends Model
      */
     public function screening()
     {
-        return $this->hasMany('App\Screening');
+        return $this->hasMany('App\screening');
     }
 
 }
