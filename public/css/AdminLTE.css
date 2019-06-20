@@ -247,6 +247,10 @@ a:focus {
   }
 }
 @media (max-width: 767px) {
+  .main-header .navbar-static-top {
+    display: flex;
+    justify-content: center;
+  }
   .main-header .navbar-right {
     float: none;
   }
@@ -2654,21 +2658,28 @@ a:focus {
  * ----------------
  */
 .data {
-  border: solid 1px #dd4b39; 
+=======
+  border: solid 1px #dd4b39;
 }
 
 .data td {
   min-width: 50px;
-  text-align: center; 
+  text-align: center;
+  text-align: center;
 }
 
 .data tr td:nth-child(2) {
   text-align: left;
-  padding: 0 5px; 
+  padding: 0 5px;
 }
 
 .data tr td.dataTitle {
   text-align: center; 
+  padding: 0 5px;
+}
+
+.data tr td.dataTitle {
+  text-align: center;
 }
 
 .table > thead > tr > th,
@@ -5010,18 +5021,20 @@ table.text-center th {
 button {
   background: #dd4b39;
   color: white;
-  border: 3px solid #dd4b39; 
+  border: 3px solid #dd4b39;
+  border: 3px solid #dd4b39;
 }
 
 .insertdata p {
   display: flex;
   justify-content: space-between;
-  max-width: 500px; 
+  max-width: 500px;
+  max-width: 500px;
 }
 
 .insertdata p input[type=text],
 .insertdata p textarea {
-  width: 70%;  
+  width: 70%;
 }
 
 .insertdata p input[type="date"] {
@@ -5029,5 +5042,14 @@ button {
 }
 
 .insertdata p select {
-  width: 40%; 
+  width: 40%;
+  width: 70%;
+}
+
+.insertdata p input[type="date"] {
+  width: 40%;
+}
+
+.insertdata p select {
+  width: 40%;
 }

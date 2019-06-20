@@ -6,7 +6,7 @@
         <a href="#">
             <li> Tomorrow </li>
         </a>
-        <a class="day" href="#" value="maandag">
+        <a class="day" href="#">
             <li> Mon. </li>
         </a>
         <a class="day" href="#"> 

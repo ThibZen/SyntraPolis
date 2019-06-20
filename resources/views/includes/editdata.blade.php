@@ -37,6 +37,22 @@
                 <td><input type="text" name="imdb" value="{{ ($movie) ? $movie['IMDBLink'] : '' }}"></td>
             </tr>
             <tr>
+                <td>Actor firstname</td>
+                <td><input type="text" name="actorfirst" value="{{ ($actor) ? $actor['MovieID'] : '' }}"></td>
+            </tr>
+            <tr>
+                <td>Actor lastname</td>
+                <td><input type="text" name="actorlast" value="{{ ($actor) ? $actor['ActorID'] : '' }}"></td>
+            </tr>
+            <tr>
+                <td>Director firstname</td>
+                <td><input type="text" name="directorfirst" value="{{ ($director) ? $director['MovieID'] : '' }}"></td>
+            </tr>
+            <tr>
+                <td>Director lastname</td>
+                <td><input type="text" name="directorlast" value="{{ ($director) ? $director['DirectorID'] : '' }}"></td>
+            </tr>
+
                 <td><input type="submit" name="submit" value="Update"></td>
             </tr>
         </table>

@@ -33,7 +33,7 @@ class movie extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
 
-    public function movieactors()
+    public function movieactor()
     {
         return $this->hasMany('App\Movieactor');
     }
@@ -41,7 +41,7 @@ class movie extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function moviedirectors()
+    public function moviedirector()
     {
         return $this->hasMany('App\Moviedirector');
     }

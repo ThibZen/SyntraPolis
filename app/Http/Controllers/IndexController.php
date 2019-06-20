@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\genre;
 use App\movie;
 use App\Movies;
-use App\movieactors;
+use App\movieactor;
 use App\moviegenre;
 use App\moviepegi;
 use App\pricing;

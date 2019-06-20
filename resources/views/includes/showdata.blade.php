@@ -34,6 +34,7 @@
                 <td>{{$movie->Runtime}}</td>
                 <td>{{$movie->ReleaseDate}}</td>
                 <td>{{$movie->Active}}</td>
+                <td>{{$movie->movie_id}}</td>
                 <td><a href="{{route ('edit',$movie->id)}}"><button>Edit</button></a></td>
                 <td><a href="{{route ('delete',$movie->id)}}"><button>Delete</button></a></td>
 
