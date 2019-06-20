@@ -2,7 +2,8 @@
 @extends('layouts.default')
 
 @section('content')
-<form autocomplete="off" method="POST">
+<form autocomplete="off" action="{{ route('orderStore') }}" method="POST">
+        @csrf
         <label for="title">Title</label>
         <input name="Title" id="title" type="text" placeholder="Title" autocomplete="off" value="{{ old('Title') }}"><br>
 
@@ -14,13 +15,13 @@
 
         <label for="title">First Name</label>
         <input name="firstname" id="firstname" type="text" placeholder="John" autocomplete="off" value="{{ old('firstname') }}"><br>
-    
+
         <label for="lastname">Last Name</label>
         <input name="lastname" id="lastname" type="text" placeholder="Doe" autocomplete="off" value="{{ old('lastname') }}"><br>
-    
+
         <label for="email">Email Adress</label>
         <input name="email" id="email" type="email" placeholder="john.doe@example.com" autocomplete="off" value="{{ old('email') }}"><br>
-    
+
         <label for="auditorium">Auditorium</label>
         <input name="auditorium" id="auditorium" type="text" placeholder="" autocomplete="off" value="{{ old('Auditorium') }}"><br>
 
@@ -36,8 +37,7 @@
                 <option value="8"> 8 </option>
                 <option value="9"> 9 </option>
         </select><br>
-
         <br><br>
         <input type="submit" value="Send">
-    </form>
+</form>
 @endsection
